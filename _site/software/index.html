@@ -50,10 +50,23 @@
 <h2 id="table-of-contents">Table of contents</h2>
 
 <ul>
+  <li><a href="#architecture">Architecture</a></li>
+  <li><a href="#design">Design</a>
+    <ul>
+      <li><a href="#immutable-datastructures">Immutable datastructures</a></li>
+    </ul>
+  </li>
   <li><a href="#spring">Spring</a></li>
   <li><a href="#model-driven-software-development">Model-Driven Software Development</a></li>
   <li><a href="#references">References</a></li>
 </ul>
+
+<h2 id="architecture">Architecture</h2>
+
+<h2 id="design">Design</h2>
+
+<h3 id="immutable-datastructures">Immutable datastructures</h3>
+<p>The paper “Making Data Structures Persistent” introduces methods to preserve all versions of data structures instead of overwriting them [3]. It defines partial and full persistence and proposes two key techniques — fat nodes and node copying — to achieve this with minimal time and space overhead. Using these methods, the authors create persistent balanced trees like red-black trees, enabling access and updates across versions efficiently. Foundational work laid the groundwork for immutable data structures used in modern functional programming and versioned systems.</p>
 
 <h2 id="spring">Spring</h2>
 
@@ -76,8 +89,11 @@
 
 <h1 id="references">References</h1>
 
-<p>[1] S. Pinjala, P. Seetharaman, and R. Roy, “Impact of Cloud on Firm Evolution: A Causal Model of a Latecomer ERP Firm in an Emerging Economy,” Proceedings of the 38th International Conference on Information Systems (ICIS), Seoul, 2017.
-[2] R. Johnson, Expert One-on-One J2EE Design and Development. Wiley, 2002.</p>
+<p>[1] S. Pinjala, P. Seetharaman, and R. Roy, “Impact of Cloud on Firm Evolution: A Causal Model of a Latecomer ERP Firm in an Emerging Economy,” Proceedings of the 38th International Conference on Information Systems (ICIS), Seoul, 2017.</p>
+
+<p>[2] R. Johnson, Expert One-on-One J2EE Design and Development. Wiley, 2002.</p>
+
+<p>[3] Driscoll, J. R.; Sarnak, N.; Sleator, D. D.; and Tarjan, R. E. 1989. <em>Making Data Structures Persistent</em>. Journal of Computer and System Sciences 38, 1 (Feb. 1989), 86–124. DOI:<a href="https://doi.org/10.1016/0022-0000(89)90034-2">10.1016/0022-0000(89)90034-2</a></p>
 
   </div>
 

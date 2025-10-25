@@ -12,9 +12,19 @@ This page collects my notes, tutorials, tips, and things I learn in software eng
 
 ## Table of contents
 
+- [Architecture](#architecture)
+- [Design](#design)
+  - [Immutable datastructures](#immutable-datastructures)
 - [Spring](#spring)
 - [Model-Driven Software Development](#model-driven-software-development)
 - [References](#references)
+
+## Architecture
+
+## Design
+
+### Immutable datastructures
+The paper “Making Data Structures Persistent” introduces methods to preserve all versions of data structures instead of overwriting them [3]. It defines partial and full persistence and proposes two key techniques — fat nodes and node copying — to achieve this with minimal time and space overhead. Using these methods, the authors create persistent balanced trees like red-black trees, enabling access and updates across versions efficiently. Foundational work laid the groundwork for immutable data structures used in modern functional programming and versioned systems.
 
 ## Spring
 
@@ -34,4 +44,7 @@ The paper examines how ERP firms in emerging economies, especially India’s Ram
 # References
 
 [1] S. Pinjala, P. Seetharaman, and R. Roy, “Impact of Cloud on Firm Evolution: A Causal Model of a Latecomer ERP Firm in an Emerging Economy,” Proceedings of the 38th International Conference on Information Systems (ICIS), Seoul, 2017.
+
 [2] R. Johnson, Expert One-on-One J2EE Design and Development. Wiley, 2002.
+
+[3] Driscoll, J. R.; Sarnak, N.; Sleator, D. D.; and Tarjan, R. E. 1989. *Making Data Structures Persistent*. Journal of Computer and System Sciences 38, 1 (Feb. 1989), 86–124. DOI:[10.1016/0022-0000(89)90034-2](https://doi.org/10.1016/0022-0000(89)90034-2)
