@@ -15,15 +15,11 @@ This page collects my notes, tutorials, tips, and things I learn in software eng
 - [Machine Learning](#machine-learning)
 - [Architecture](#architecture)
 - [Design](#design)
-- [Spring](#spring)
 - [References](#references)
-
-## Machine learning
 
 ## Architecture
 
 ## Design
-
 ### Immutable datastructures
 The paper “Making Data Structures Persistent” introduces methods to preserve all versions of data structures instead of overwriting them [3]. It defines partial and full persistence and proposes two key techniques — fat nodes and node copying — to achieve this with minimal time and space overhead. Using these methods, the authors create persistent balanced trees like red-black trees, enabling access and updates across versions efficiently. Foundational work laid the groundwork for immutable data structures used in modern functional programming and versioned systems.
 
@@ -36,11 +32,13 @@ The paper “Making Data Structures Persistent” introduces methods to preserve
 
 The paper examines how ERP firms in emerging economies, especially India’s Ramco Systems Limited, leveraged model-driven development and cloud computing to overcome structural disadvantages [1].
 
-## Spring
+### Spring
 
 > "Rod Johnson drafted much of his book while trekking to Everest Base Camp." [2]
 
 Spring's core design principle is Inversion of Control (IoC), realized through dependency injection (DI). It emphasizes simple POJO-based components for loose coupling and easier testing. Aspect-Oriented Programming (AOP) is used alongside IoC to separate cross-cutting concerns.
+
+## Databases
 
 # References
 

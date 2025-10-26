@@ -29,7 +29,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/western-classical-music/">Western classical music</a></div>
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/machine-learning.html">Machine Learning</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -50,33 +50,19 @@
 <h2 id="table-of-contents">Table of contents</h2>
 
 <ul>
+  <li><a href="#machine-learning">Machine Learning</a></li>
   <li><a href="#architecture">Architecture</a></li>
-  <li><a href="#design">Design</a>
-    <ul>
-      <li><a href="#immutable-datastructures">Immutable datastructures</a></li>
-    </ul>
-  </li>
-  <li><a href="#spring">Spring</a></li>
-  <li><a href="#model-driven-software-development">Model-Driven Software Development</a></li>
+  <li><a href="#design">Design</a></li>
   <li><a href="#references">References</a></li>
 </ul>
 
 <h2 id="architecture">Architecture</h2>
 
 <h2 id="design">Design</h2>
-
 <h3 id="immutable-datastructures">Immutable datastructures</h3>
 <p>The paper “Making Data Structures Persistent” introduces methods to preserve all versions of data structures instead of overwriting them [3]. It defines partial and full persistence and proposes two key techniques — fat nodes and node copying — to achieve this with minimal time and space overhead. Using these methods, the authors create persistent balanced trees like red-black trees, enabling access and updates across versions efficiently. Foundational work laid the groundwork for immutable data structures used in modern functional programming and versioned systems.</p>
 
-<h2 id="spring">Spring</h2>
-
-<blockquote>
-  <p>“Rod Johnson drafted much of his book while trekking to Everest Base Camp.” [2]</p>
-</blockquote>
-
-<p>Spring’s core design principle is Inversion of Control (IoC), realized through dependency injection (DI). It emphasizes simple POJO-based components for loose coupling and easier testing. Aspect-Oriented Programming (AOP) is used alongside IoC to separate cross-cutting concerns.</p>
-
-<h2 id="model-driven-software-development">Model-Driven Software Development</h2>
+<h3 id="model-driven-software-development">Model-Driven Software Development</h3>
 
 <ul>
   <li><strong>Domain-Specific Modeling</strong>: Creating abstract representations of business processes and data flows using Platform-Independent Models.</li>
@@ -86,6 +72,16 @@
 </ul>
 
 <p>The paper examines how ERP firms in emerging economies, especially India’s Ramco Systems Limited, leveraged model-driven development and cloud computing to overcome structural disadvantages [1].</p>
+
+<h3 id="spring">Spring</h3>
+
+<blockquote>
+  <p>“Rod Johnson drafted much of his book while trekking to Everest Base Camp.” [2]</p>
+</blockquote>
+
+<p>Spring’s core design principle is Inversion of Control (IoC), realized through dependency injection (DI). It emphasizes simple POJO-based components for loose coupling and easier testing. Aspect-Oriented Programming (AOP) is used alongside IoC to separate cross-cutting concerns.</p>
+
+<h2 id="databases">Databases</h2>
 
 <h1 id="references">References</h1>
 
