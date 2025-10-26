@@ -14,3 +14,5 @@ What I write about
 # Contact
 - Email: vishravars@gmail.com
 - Social: [LinkedIn](https://www.linkedin.com/in/vishravars-ramasubramanian-752602178/)
+
+[Software](/software/) | [Machine Learning](/machine-learning/) | [Western classical music](/western-classical-music/) | [RSS Feed](/feed.xml)
