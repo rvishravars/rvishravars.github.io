@@ -17,8 +17,8 @@ What I write about
 - [RSS Feed](/feed.xml)
 
 ## Projects
-- Conundrum Creator Suite — a new app built using Lovable. Try it: https://conundrum-creator-suite.lovable.app/  
-  More about Lovable (developer platform): https://lovable.dev
+- [Conundrum Creator Suite — a new app built using Lovable](https://conundrum-creator-suite.lovable.app/)  
+  More about Lovable (developer platform): [Lovable](https://lovable.dev)
 
 ## Writeups
 - Read my writeups and essays: [Writeups](/writeup/)
