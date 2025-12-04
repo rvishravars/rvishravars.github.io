@@ -29,7 +29,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/writeup/">Writeups</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/machine-learning.html">Machine Learning</a></div>
+        <div class="trigger"><a class="page-link" href="/software/architecture/">Architecture</a><a class="page-link" href="/software/databases/">Databases</a><a class="page-link" href="/software/design/">Design</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/writeup/">Writeups</a><a class="page-link" href="/machine-learning/">Machine Learning</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -47,49 +47,21 @@
 
 <p>This page collects my notes, tutorials, tips, and things I learn in software engineering.</p>
 
-<h2 id="table-of-contents">Table of contents</h2>
+<h2 id="topics">Topics</h2>
 
 <ul>
-  <li><a href="#machine-learning">Machine Learning</a></li>
-  <li><a href="#architecture">Architecture</a></li>
-  <li><a href="#design">Design</a></li>
-  <li><a href="#references">References</a></li>
+  <li><a href="/software/architecture">Architecture</a></li>
+  <li><a href="/software/design">Design</a></li>
+  <li><a href="/software/databases">Databases</a></li>
 </ul>
 
-<h2 id="architecture">Architecture</h2>
-
-<h2 id="design">Design</h2>
-<h3 id="immutable-datastructures">Immutable datastructures</h3>
-<p>The paper “Making Data Structures Persistent” introduces methods to preserve all versions of data structures instead of overwriting them [3]. It defines partial and full persistence and proposes two key techniques — fat nodes and node copying — to achieve this with minimal time and space overhead. Using these methods, the authors create persistent balanced trees like red-black trees, enabling access and updates across versions efficiently. Foundational work laid the groundwork for immutable data structures used in modern functional programming and versioned systems.</p>
-
-<h3 id="model-driven-software-development">Model-Driven Software Development</h3>
+<h2 id="references">References</h2>
 
 <ul>
-  <li><strong>Domain-Specific Modeling</strong>: Creating abstract representations of business processes and data flows using Platform-Independent Models.</li>
-  <li><strong>Automated Code Generation</strong>: Converting high-level models into executable code through transformation engines</li>
-  <li><strong>Rapid Customization</strong>: Modifying business logic through model alterations rather than direct code changes</li>
-  <li><strong>Consistent Architecture</strong>: Maintaining architectural coherence across multiple tenant deployments in SaaS environments</li>
+  <li>S. Pinjala, P. Seetharaman, and R. Roy, “Impact of Cloud on Firm Evolution: A Causal Model of a Latecomer ERP Firm in an Emerging Economy,” Proceedings of the 38th International Conference on Information Systems (ICIS), Seoul, 2017.</li>
+  <li>R. Johnson, Expert One-on-One J2EE Design and Development. Wiley, 2002.</li>
+  <li>Driscoll, J. R.; Sarnak, N.; Sleator, D. D.; and Tarjan, R. E. 1989. <em>Making Data Structures Persistent</em>. Journal of Computer and System Sciences 38, 1 (Feb. 1989), 86–124. DOI:<a href="https://doi.org/10.1016/0022-0000(89)90034-2">10.1016/0022-0000(89)90034-2</a></li>
 </ul>
-
-<p>The paper examines how ERP firms in emerging economies, especially India’s Ramco Systems Limited, leveraged model-driven development and cloud computing to overcome structural disadvantages [1].</p>
-
-<h3 id="spring">Spring</h3>
-
-<blockquote>
-  <p>“Rod Johnson drafted much of his book while trekking to Everest Base Camp.” [2]</p>
-</blockquote>
-
-<p>Spring’s core design principle is Inversion of Control (IoC), realized through dependency injection (DI). It emphasizes simple POJO-based components for loose coupling and easier testing. Aspect-Oriented Programming (AOP) is used alongside IoC to separate cross-cutting concerns.</p>
-
-<h2 id="databases">Databases</h2>
-
-<h1 id="references">References</h1>
-
-<p>[1] S. Pinjala, P. Seetharaman, and R. Roy, “Impact of Cloud on Firm Evolution: A Causal Model of a Latecomer ERP Firm in an Emerging Economy,” Proceedings of the 38th International Conference on Information Systems (ICIS), Seoul, 2017.</p>
-
-<p>[2] R. Johnson, Expert One-on-One J2EE Design and Development. Wiley, 2002.</p>
-
-<p>[3] Driscoll, J. R.; Sarnak, N.; Sleator, D. D.; and Tarjan, R. E. 1989. <em>Making Data Structures Persistent</em>. Journal of Computer and System Sciences 38, 1 (Feb. 1989), 86–124. DOI:<a href="https://doi.org/10.1016/0022-0000(89)90034-2">10.1016/0022-0000(89)90034-2</a></p>
 
   </div>
 

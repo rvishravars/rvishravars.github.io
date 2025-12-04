@@ -3,18 +3,18 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Writeups | World of Vishravars</title>
+<title>Design | World of Vishravars</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Writeups" />
+<meta property="og:title" content="Design" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/writeup/" />
-<meta property="og:url" content="http://localhost:4000/writeup/" />
+<link rel="canonical" href="http://localhost:4000/software/design/" />
+<meta property="og:url" content="http://localhost:4000/software/design/" />
 <meta property="og:site_name" content="World of Vishravars" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Writeups" />
+<meta property="twitter:title" content="Design" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Writeups","url":"http://localhost:4000/writeup/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Design","url":"http://localhost:4000/software/design/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="World of Vishravars" /></head>
 <body><header class="site-header" role="banner">
@@ -37,22 +37,35 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Writeups</h1>
+    <h1 class="post-title">Design</h1>
   </header>
 
   <div class="post-content">
-    <h1 id="writeups">Writeups</h1>
+    <h1 id="design">Design</h1>
 
-<p><a href="/">← Back to Home</a></p>
+<p><a href="/software/">← Back to Software</a></p>
 
-<p>This page collects my essays and technical writeups. Download PDFs below:</p>
+<h2 id="immutable-datastructures">Immutable datastructures</h2>
+<p>The paper “Making Data Structures Persistent” introduces methods to preserve all versions of data structures instead of overwriting them [3]. It defines partial and full persistence and proposes two key techniques — fat nodes and node copying — to achieve this with minimal time and space overhead. Using these methods, the authors create persistent balanced trees like red-black trees, enabling access and updates across versions efficiently. Foundational work laid the groundwork for immutable data structures used in modern functional programming and versioned systems.</p>
+
+<h2 id="model-driven-software-development">Model-Driven Software Development</h2>
 
 <ul>
-  <li><a href="/writeup/Embedding-Based-Retrieval-Study.pdf">Embedding based retrieval</a></li>
-  <li><a href="/writeup/Unified_Mobile_Resource_Governor.pdf">Unified mobile resource governor</a></li>
+  <li><strong>Domain-Specific Modeling</strong>: Creating abstract representations of business processes and data flows using Platform-Independent Models.</li>
+  <li><strong>Automated Code Generation</strong>: Converting high-level models into executable code through transformation engines</li>
+  <li><strong>Rapid Customization</strong>: Modifying business logic through model alterations rather than direct code changes</li>
+  <li><strong>Consistent Architecture</strong>: Maintaining architectural coherence across multiple tenant deployments in SaaS environments</li>
 </ul>
 
-<!-- To add more: place PDF files under /writeup/pdfs/ in the repository and add list entries above. -->
+<p>The paper examines how ERP firms in emerging economies, especially India’s Ramco Systems Limited, leveraged model-driven development and cloud computing to overcome structural disadvantages [1].</p>
+
+<h2 id="spring">Spring</h2>
+
+<blockquote>
+  <p>“Rod Johnson drafted much of his book while trekking to Everest Base Camp.” [2]</p>
+</blockquote>
+
+<p>Spring’s core design principle is Inversion of Control (IoC), realized through dependency injection (DI). It emphasizes simple POJO-based components for loose coupling and easier testing. Aspect-Oriented Programming (AOP) is used alongside IoC to separate cross-cutting concerns.</p>
 
   </div>
 

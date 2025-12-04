@@ -1,3 +1,9 @@
+---
+layout: page
+title: Machine Learning
+permalink: /machine-learning/
+---
+
 # Machine Learning
 
 [← Back to Home](/)
@@ -110,13 +116,6 @@
 | Gradient Descent | Iterative optimization method for minimizing loss. |
 | Learning Rate | Step size determining how much to adjust parameters in gradient descent. |
 | Regularization | Penalizes model complexity to prevent overfitting. |
-
----
-
-## Regression 2
-
-| **Term** | **One-line Explanation** |
-|-----------|---------------------------|
 | Ridge Regression | L2 regularization that shrinks coefficients to reduce variance. |
 | LASSO Regression | L1 regularization that drives some coefficients to zero (feature selection). |
 | Decision Tree Regressor | Splits data space recursively to minimize prediction error. |
@@ -238,7 +237,6 @@
 
 ## Deep Transfer Learning
 
-
 | **Term** | **One-line Explanation** |
 |-----------|--------------------------|
 | **Deep Transfer Learning (DTL)** | Using deep neural networks to transfer features or representations between domains. |
@@ -277,15 +275,15 @@
 
 ## References
 
-- Pan & Yang, *A Survey on Transfer Learning*, IEEE TKDE 2010.  
-- Raina et al., *Self-taught Learning*, ICML 2007.  
-- Ganin & Lempitsky, *Unsupervised Domain Adaptation by Backpropagation (DANN)*, ICML 2015.  
-- Liu et al., *UNIT: Unsupervised Image-to-Image Translation Networks*, NeurIPS 2017.  
-- Xu et al., *Adversarial Domain Adaptation with Domain Mixup*, AAAI 2020.  
-- Hou et al., *Cross-Domain Latent Modulation*, WACV 2021.  
-- McMahan et al., *Communication-efficient Learning of Deep Networks from Decentralized Data*, AISTATS 2017.  
-- Bonawitz et al., *Practical Secure Aggregation for Federated Learning*, NIPS 2016.  
-- Pang et al., *Rule-based Collaborative Learning (CloREF)*, PAKDD 2022 / IEEE TKDE 2023.  
+- Pan & Yang, *A Survey on Transfer Learning*, IEEE TKDE 2010.
+- Raina et al., *Self-taught Learning*, ICML 2007.
+- Ganin & Lempitsky, *Unsupervised Domain Adaptation by Backpropagation (DANN)*, ICML 2015.
+- Liu et al., *UNIT: Unsupervised Image-to-Image Translation Networks*, NeurIPS 2017.
+- Xu et al., *Adversarial Domain Adaptation with Domain Mixup*, AAAI 2020.
+- Hou et al., *Cross-Domain Latent Modulation*, WACV 2021.
+- McMahan et al., *Communication-efficient Learning of Deep Networks from Decentralized Data*, AISTATS 2017.
+- Bonawitz et al., *Practical Secure Aggregation for Federated Learning*, NIPS 2016.
+- Pang et al., *Rule-based Collaborative Learning (CloREF)*, PAKDD 2022 / IEEE TKDE 2023.
 
 ---
 
