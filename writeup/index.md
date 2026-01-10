@@ -8,7 +8,7 @@ permalink: /writeup/
 
 [← Back to Home](/)
 
-This page collects my essays and technical writeups. Download PDFs below:
+This page collects my essays and technical writeups.
 
 - [Embedding based retrieval](/writeup/Embedding-Based-Retrieval-Study.pdf)
 - [Unified mobile resource governor](/writeup/Unified_Mobile_Resource_Governor.pdf)

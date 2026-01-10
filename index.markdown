@@ -24,9 +24,9 @@ I have gathered some content which interest me. Hope you may be able to pick up 
 - [Gauravsen paper references](https://github.com/InterviewReady/ai-engineering-resources)
 
 ## Reading
-- Tamil wiki [Link](https://tamil.wiki/wiki/Main_Page_(English))
+- [Tamil wiki](https://tamil.wiki/wiki/Main_Page_(English))
 
 # Contact
-- Email: vishravars@gmail.com
-- Social: [LinkedIn](https://www.linkedin.com/in/vishravars-ramasubramanian-752602178/)
+- [Email](vishravars@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/vishravars-ramasubramanian-752602178/)
 - [RSS Feed](/feed.xml)

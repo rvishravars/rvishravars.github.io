@@ -12,9 +12,7 @@ This page collects my notes, tutorials, tips, and things I learn in software eng
 
 ## Topics
 
-- [Architecture](/software/architecture)
 - [Design](/software/design)
-- [Databases](/software/databases)
 
 ## References
 
