@@ -20,5 +20,8 @@ What I write about
 - [Conundrum Creator Suite — a new app built using Lovable](https://conundrum-creator-suite.lovable.app/)  
   More about Lovable (developer platform): [Lovable](https://lovable.dev)
 
+## Papers
+- [Gauravsen Papers references](https://github.com/InterviewReady/ai-engineering-resources)
+
 ## Writeups
 - Read my writeups and essays: [Writeups](/writeup/)
