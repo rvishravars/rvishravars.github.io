@@ -8,6 +8,8 @@ permalink: /machine-learning/
 
 [← Back to Home](/)
 
+Below is a collection of core ML terms and their overly simplistic one line explanations.
+
 ## 🧩 Clustering I & II
 
 | **Term** | **One-Line Explanation** |
