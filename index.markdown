@@ -23,5 +23,8 @@ What I write about
 ## Papers
 - [Gauravsen Papers references](https://github.com/InterviewReady/ai-engineering-resources)
 
+## Readings
+- Tamil wiki [Link](https://tamil.wiki/wiki/Main_Page_(English))
+
 ## Writeups
 - Read my writeups and essays: [Writeups](/writeup/)

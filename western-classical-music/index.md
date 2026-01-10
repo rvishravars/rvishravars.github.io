@@ -11,3 +11,7 @@ permalink: /western-classical-music/
 This page collects my notes, insights, and resources on Western classical music.
 
 <!-- Add your music-related content here. -->
+
+## Reading
+
+[Classical Music](https://en.wikipedia.org/wiki/Classical_music)
