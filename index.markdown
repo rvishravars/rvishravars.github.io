@@ -6,6 +6,16 @@ layout: home
 ---
 I write about things I learn in software engineering and Western classical music.
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "vishravars",
+  "url": "https://rvishravars.github.io/",
+  "sameAs": []
+}
+</script>
+
 See philosophy essays by [vishravars](/philosophy/).
 
 What I write about
