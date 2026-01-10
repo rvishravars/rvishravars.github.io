@@ -6,6 +6,8 @@ layout: home
 ---
 I write about things I learn in software engineering and Western classical music.
 
+See philosophy essays by [vishravars](/philosophy/).
+
 What I write about
 - [Software](/software/): practical notes, small tutorials, tooling tips, debugging approaches, and design patterns I find useful.
 - [Machine Learning](/machine-learning/): algorithms, implementations, paper summaries, and practical applications.
