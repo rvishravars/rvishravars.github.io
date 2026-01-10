@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Philosophy — vishravars"
+title: "Philosophy"
 permalink: /philosophy/
-description: "Philosophy notes and essays by vishravars."
+description: "Philosophy notes."
 author: "vishravars"
 ---
 
