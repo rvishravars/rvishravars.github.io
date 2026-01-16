@@ -29,7 +29,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/software/design/">Design</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/philosophy/">Philosophy</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/writeup/">Writeups</a><a class="page-link" href="/machine-learning/">Machine Learning</a></div>
+        <div class="trigger"><a class="page-link" href="/software/design/">Design</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/philosophy/">Philosophy</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/machine-learning/">Machine Learning</a><a class="page-link" href="/writeup/">Writeups</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -57,7 +57,7 @@
 
 <p>Below is a collection of core ML terms and their overly simplistic one line explanations.</p>
 
-<h2 id="six-steps-in-machine-learning">Six steps in Machine learning</h2>
+<h2 id="-six-steps-in-machine-learning">👣 Six steps in Machine learning</h2>
 
 <table>
   <thead>
@@ -94,7 +94,7 @@
   </tbody>
 </table>
 
-<h2 id="building-blocks">Building blocks</h2>
+<h2 id="-building-blocks">🧱 Building blocks</h2>
 
 <table>
   <thead>
@@ -162,20 +162,8 @@
   </thead>
   <tbody>
     <tr>
-      <td>$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $</td>
-      <td>dfsdff</td>
-    </tr>
-    <tr>
       <td>Hypothesis Class (Classification)</td>
       <td>$ \mathcal{H} = { f_\theta : \mathcal{X} \rightarrow {1,\dots,K} \mid \theta \in \Theta } $, the set of all classifiers mapping inputs to discrete class labels.</td>
-    </tr>
-    <tr>
-      <td>Hypothesis</td>
-      <td>$ f_\theta $, a candidate function from the hypothesis class chosen to model the data.</td>
-    </tr>
-    <tr>
-      <td>Parameter</td>
-      <td>$ \theta $, the values (e.g., weights and biases) learned from data during training.</td>
     </tr>
     <tr>
       <td>Feature Representation</td>
@@ -200,14 +188,6 @@
     <tr>
       <td>Loss Function</td>
       <td>$ L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) $, cross-entropy measuring disagreement between true and predicted probabilities.</td>
-    </tr>
-    <tr>
-      <td>Training Set</td>
-      <td>$ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training data.</td>
-    </tr>
-    <tr>
-      <td>Test Set Error</td>
-      <td>$ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data.</td>
     </tr>
     <tr>
       <td>ML as Optimization</td>
@@ -516,7 +496,7 @@
   </tbody>
 </table>
 
-<h2 id="feature-selection">Feature Selection</h2>
+<h2 id="-feature-selection">🎯 Feature Selection</h2>
 
 <table>
   <thead>
@@ -575,7 +555,7 @@
 
 <hr />
 
-<h2 id="performance-evaluation">Performance Evaluation</h2>
+<h2 id="-performance-evaluation">📊 Performance Evaluation</h2>
 
 <table>
   <thead>
@@ -630,7 +610,7 @@
 
 <hr />
 
-<h2 id="regression">Regression</h2>
+<h2 id="-regression">📈 Regression</h2>
 
 <table>
   <thead>
@@ -700,16 +680,12 @@
       <td>MAE</td>
       <td>Mean of absolute prediction errors; less sensitive to outliers.</td>
     </tr>
-    <tr>
-      <td>Regularization Parameter (λ)</td>
-      <td>Controls trade-off between bias and variance.</td>
-    </tr>
   </tbody>
 </table>
 
 <hr />
 
-<h2 id="ensemble-learning">Ensemble Learning</h2>
+<h2 id="-ensemble-learning">👯 Ensemble Learning</h2>
 
 <table>
   <thead>
@@ -756,7 +732,7 @@
 
 <hr />
 
-<h2 id="model-selection">Model Selection</h2>
+<h2 id="️-model-selection">⚖️ Model Selection</h2>
 
 <table>
   <thead>
@@ -779,14 +755,6 @@
       <td>Balancing underfitting (bias) vs overfitting (variance).</td>
     </tr>
     <tr>
-      <td>Cross-Validation</td>
-      <td>Estimates generalization by testing on unseen folds.</td>
-    </tr>
-    <tr>
-      <td>Regularization</td>
-      <td>Adds penalty terms to control model complexity.</td>
-    </tr>
-    <tr>
       <td>AIC</td>
       <td>Akaike Information Criterion for model comparison using likelihood and parameters.</td>
     </tr>
@@ -803,7 +771,7 @@
 
 <hr />
 
-<h2 id="multilayer-perceptron">Multilayer Perceptron</h2>
+<h2 id="️-multilayer-perceptron">🕸️ Multilayer Perceptron</h2>
 
 <table>
   <thead>
@@ -814,20 +782,12 @@
   </thead>
   <tbody>
     <tr>
-      <td>Perceptron</td>
-      <td>Basic linear classifier using weighted sums and activation.</td>
-    </tr>
-    <tr>
       <td>Activation Function</td>
       <td>Nonlinear function applied to neuron outputs (e.g., ReLU, sigmoid).</td>
     </tr>
     <tr>
       <td>Backpropagation</td>
       <td>Algorithm to compute gradients and update weights in neural networks.</td>
-    </tr>
-    <tr>
-      <td>Learning Rate</td>
-      <td>Determines how fast weights are updated during training.</td>
     </tr>
     <tr>
       <td>Momentum</td>
@@ -850,7 +810,7 @@
 
 <hr />
 
-<h2 id="convolutional-neural-networks">Convolutional Neural Networks</h2>
+<h2 id="️-convolutional-neural-networks">🖼️ Convolutional Neural Networks</h2>
 
 <table>
   <thead>
@@ -893,7 +853,7 @@
 
 <hr />
 
-<h2 id="variational-autoencoder-vae">Variational Autoencoder (VAE)</h2>
+<h2 id="-variational-autoencoder-vae">🎭 Variational Autoencoder (VAE)</h2>
 
 <table>
   <thead>
@@ -940,7 +900,7 @@
 
 <hr />
 
-<h2 id="generative-adversarial-network-gan">Generative Adversarial Network (GAN)</h2>
+<h2 id="️-generative-adversarial-network-gan">⚔️ Generative Adversarial Network (GAN)</h2>
 
 <table>
   <thead>
@@ -987,7 +947,7 @@
 
 <hr />
 
-<h2 id="transfer-learning">Transfer Learning</h2>
+<h2 id="-transfer-learning">🎓 Transfer Learning</h2>
 
 <table>
   <thead>
@@ -1054,7 +1014,7 @@
 
 <hr />
 
-<h2 id="deep-transfer-learning">Deep Transfer Learning</h2>
+<h2 id="-deep-transfer-learning">🤖 Deep Transfer Learning</h2>
 
 <table>
   <thead>
@@ -1075,14 +1035,6 @@
     <tr>
       <td><strong>Adversarial Domain Adaptation (DANN)</strong></td>
       <td>Using adversarial training to make feature representations domain-invariant.</td>
-    </tr>
-    <tr>
-      <td><strong>VAE (Variational Autoencoder)</strong></td>
-      <td>A generative model used to learn continuous latent representations.</td>
-    </tr>
-    <tr>
-      <td><strong>GAN (Generative Adversarial Network)</strong></td>
-      <td>A generative model where two networks compete to produce realistic outputs.</td>
     </tr>
     <tr>
       <td><strong>UNIT (Unsupervised Image-to-Image Translation)</strong></td>
@@ -1117,7 +1069,7 @@
 
 <hr />
 
-<h2 id="federated-learning">Federated Learning</h2>
+<h2 id="-federated-learning">📱 Federated Learning</h2>
 
 <table>
   <thead>
@@ -1180,7 +1132,7 @@
 
 <hr />
 
-<h2 id="references">References</h2>
+<h2 id="-references">📚 References</h2>
 
 <ul>
   <li>Pan &amp; Yang, <em>A Survey on Transfer Learning</em>, IEEE TKDE 2010.</li>

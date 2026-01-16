@@ -10,7 +10,7 @@ permalink: /machine-learning/
 
 Below is a collection of core ML terms and their overly simplistic one line explanations.
 
-## Six steps in Machine learning
+## 👣 Six steps in Machine learning
 
 | Term | One-Line Explanation |
 |-----|----------------------|
@@ -21,7 +21,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | Run | Execute the algorithm on the data to learn model parameters. |
 | Validate | Evaluate performance on unseen data to assess generalization. |
 
-## Building blocks
+## 🧱 Building blocks
 
 | Term | One-Line Explanation |
 |-----|----------------------|
@@ -41,18 +41,13 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 | Term | One-Line Explanation |
 |-----|----------------------|
-| $ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $ | dfsdff |
 | Hypothesis Class (Classification) | $ \mathcal{H} = \{ f_\theta : \mathcal{X} \rightarrow \{1,\dots,K\} \mid \theta \in \Theta \} $, the set of all classifiers mapping inputs to discrete class labels. |
-| Hypothesis | $ f_\theta $, a candidate function from the hypothesis class chosen to model the data. |
-| Parameter | $ \theta $, the values (e.g., weights and biases) learned from data during training. |
 | Feature Representation | $ x \in \mathcal{X} $, the vector of input features that encodes the raw data for the learning algorithm. |
 | Feature Transform | $ \phi(x) : \mathcal{X} \rightarrow \mathcal{F} $, a mapping that converts input features into a new space to make patterns easier to learn. |
 | Feature Transform Example | $ \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) $, lifting 2D inputs into a higher-dimensional space to make them linearly separable. |
 | One-Hot Encoding | Converts categorical values into binary vectors, e.g., Red → [1,0,0], Green → [0,1,0], Blue → [0,0,1]. |
 | Feature Standardization | $ x' = \frac{x - \mu}{\sigma} $, rescales features to have zero mean and unit variance. |
 | Loss Function | $ L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) $, cross-entropy measuring disagreement between true and predicted probabilities. |
-| Training Set | $ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training data. |
-| Test Set Error | $ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data. |
 | ML as Optimization | $ \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) $, minimizing empirical risk. |
 | Linear Classifier (Sign Function) | $ f(x) = \operatorname{sign}(w^\top x + b) $, assigns class based on which side of the hyperplane the input lies. |
 | Types of Linear Classifiers | Perceptron, Logistic Regression, Linear SVM, Least-Squares Classifier, all using linear decision boundaries. |
@@ -137,7 +132,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Gini Index** | A simpler impurity measure used in decision tree algorithms like CART. |
 | **Feature Importance** | Quantifies each feature’s contribution to reducing impurity in a decision tree. |
 
-## Feature Selection
+## 🎯 Feature Selection
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -155,7 +150,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Performance Evaluation
+## 📊 Performance Evaluation
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -172,7 +167,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Regression
+## 📈 Regression
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -191,11 +186,10 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | R² (Coefficient of Determination) | Measures proportion of variance explained by the model. |
 | RMSE | Square root of mean squared error; penalizes large errors. |
 | MAE | Mean of absolute prediction errors; less sensitive to outliers. |
-| Regularization Parameter (λ) | Controls trade-off between bias and variance. |
 
 ---
 
-## Ensemble Learning
+## 👯 Ensemble Learning
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -210,29 +204,25 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Model Selection
+## ⚖️ Model Selection
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
 | Bias | Systematic error due to overly simple models. |
 | Variance | Sensitivity to fluctuations in training data. |
 | Bias-Variance Tradeoff | Balancing underfitting (bias) vs overfitting (variance). |
-| Cross-Validation | Estimates generalization by testing on unseen folds. |
-| Regularization | Adds penalty terms to control model complexity. |
 | AIC | Akaike Information Criterion for model comparison using likelihood and parameters. |
 | BIC | Bayesian Information Criterion penalizing model complexity more strongly. |
 | Hyperparameter Tuning | Adjusting non-learnable settings (e.g., k in KNN) to optimize performance. |
 
 ---
 
-## Multilayer Perceptron
+## 🕸️ Multilayer Perceptron
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
-| Perceptron | Basic linear classifier using weighted sums and activation. |
 | Activation Function | Nonlinear function applied to neuron outputs (e.g., ReLU, sigmoid). |
 | Backpropagation | Algorithm to compute gradients and update weights in neural networks. |
-| Learning Rate | Determines how fast weights are updated during training. |
 | Momentum | Adds a fraction of previous weight update to speed convergence. |
 | Vanishing Gradient | Gradients shrink in deep networks, hindering learning. |
 | Mini-batch Gradient Descent | Uses small data subsets for faster, smoother updates. |
@@ -240,7 +230,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Convolutional Neural Networks
+## 🖼️ Convolutional Neural Networks
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -254,7 +244,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Variational Autoencoder (VAE)
+## 🎭 Variational Autoencoder (VAE)
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -269,7 +259,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Generative Adversarial Network (GAN)
+## ⚔️ Generative Adversarial Network (GAN)
 
 | **Term** | **One-line Explanation** |
 |-----------|---------------------------|
@@ -284,7 +274,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Transfer Learning
+## 🎓 Transfer Learning
 
 | **Term** | **One-line Explanation** |
 |-----------|--------------------------|
@@ -304,15 +294,13 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Deep Transfer Learning
+## 🤖 Deep Transfer Learning
 
 | **Term** | **One-line Explanation** |
 |-----------|--------------------------|
 | **Deep Transfer Learning (DTL)** | Using deep neural networks to transfer features or representations between domains. |
 | **Domain Invariance** | Ensuring learned features are independent of domain differences. |
 | **Adversarial Domain Adaptation (DANN)** | Using adversarial training to make feature representations domain-invariant. |
-| **VAE (Variational Autoencoder)** | A generative model used to learn continuous latent representations. |
-| **GAN (Generative Adversarial Network)** | A generative model where two networks compete to produce realistic outputs. |
 | **UNIT (Unsupervised Image-to-Image Translation)** | Framework combining VAE and GAN to translate images across domains. |
 | **CGGS/DATL** | Cross-Grafted Generative Stacks / Deep Adversarial Transfer Learning; creates transition domains. |
 | **Latent Space Mixup** | Mixing latent representations to create hybrid samples for domain generalization. |
@@ -323,7 +311,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Federated Learning
+## 📱 Federated Learning
 
 | **Term** | **One-line Explanation** |
 |-----------|--------------------------|
@@ -342,7 +330,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## References
+## 📚 References
 
 - Pan & Yang, *A Survey on Transfer Learning*, IEEE TKDE 2010.
 - Raina et al., *Self-taught Learning*, ICML 2007.
