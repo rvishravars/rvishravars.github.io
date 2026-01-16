@@ -46,34 +46,34 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | Feature Representation | \( x \in \mathcal{X} \), the vector of input features that encodes the raw data for the learning algorithm. |
 | Feature Transform | \( \phi(x) : \mathcal{X} \rightarrow \mathcal{F} \), a mapping that converts input features into a new space to make patterns easier to learn. |
 | Feature Transform Example | \( \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) \), lifting 2D inputs into a higher-dimensional space to make them linearly separable. |
-| One-Hot Encoding | Converts categorical values into binary vectors, e.g., for colors {Red, Green, Blue}, Red → [1, 0, 0], Green → [0, 1, 0], Blue → [0, 0, 1]. |
+| One-Hot Encoding | Converts categorical values into binary vectors, e.g., Red → [1,0,0], Green → [0,1,0], Blue → [0,0,1]. |
 | Feature Standardization | \( x' = \frac{x - \mu}{\sigma} \), rescales features to have zero mean and unit variance. |
-| Loss Function | \( L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) \), the cross-entropy loss measuring disagreement between true and predicted class probabilities. |
-| Training Set | \( \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) \), the average loss of the model on the training data. |
-| Test Set Error | \( \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) \), the average loss of the model on unseen test data. |
-| ML as Optimization | \( \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) \), learning as minimizing empirical risk over the hypothesis class. |
-| Linear Classifier (Sign Function) | \( f(x) = \operatorname{sign}(w^\top x + b) \), a binary classifier that assigns a class based on which side of the hyperplane the input lies. |
-| Types of Linear Classifiers | Perceptron, Logistic Regression, Linear SVM, and Least-Squares Classifier, all using linear decision boundaries in feature space. |
+| Loss Function | \( L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) \), cross-entropy measuring disagreement between true and predicted probabilities. |
+| Training Set | \( \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) \), the average loss on the training data. |
+| Test Set Error | \( \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) \), the average loss on unseen test data. |
+| ML as Optimization | \( \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) \), minimizing empirical risk. |
+| Linear Classifier (Sign Function) | \( f(x) = \operatorname{sign}(w^\top x + b) \), assigns class based on which side of the hyperplane the input lies. |
+| Types of Linear Classifiers | Perceptron, Logistic Regression, Linear SVM, Least-Squares Classifier, all using linear decision boundaries. |
 | Linear Separability | A dataset is linearly separable if a hyperplane exists that perfectly separates classes. |
-| Perceptron | A binary linear classifier that predicts class labels using \( f(x) = \operatorname{sign}(w^\top x + b) \). |
-| Perceptron Through Origin | A perceptron with no bias term (\( b = 0 \)), so the hyperplane passes through the origin. |
-| Perceptron Intuition | Move the decision boundary to correctly classify misclassified points by adjusting weights in the direction of the input. |
-| Perceptron Algorithm | Iteratively updates weights \( w \) and bias \( b \) using misclassified points until convergence. |
-| Margin of Data Point | The perpendicular distance from a point to the decision boundary: \( \gamma_i = \frac{y_i (w^\top x_i + b)}{\|w\|} \). |
-| Margin of Dataset | The smallest margin among all points: \( \gamma = \min_i \gamma_i \), representing dataset separability. |
-| Perceptron Convergence | If the dataset is linearly separable with margin \( \gamma \), the perceptron algorithm finds a separating hyperplane in at most \( \frac{R^2}{\gamma^2} \) updates, where \( R = \max_i \|x_i\| \). |
-| Logistic Regression | A linear classification model that estimates class probabilities using the logistic (sigmoid) function. |
-| Logistic Regression Hypothesis | \( h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} \), modeling \( P(y=1 \mid x) \). |
-| Sigmoid Function | \( \sigma(z) = \frac{1}{1 + e^{-z}} \), a smooth function that maps real-valued inputs to probabilities in \( (0,1) \). |
-| Sigmoid Characteristics | S-shaped curve, outputs in \( (0,1) \), monotonic, differentiable, and has vanishing gradients for large \(|z|\). |
-| Sigmoid Function (Visualization) | Plot of \( \sigma(z) = \frac{1}{1 + e^{-z}} \), showing the smooth S-shaped transition from 0 to 1 as \( z \) increases. ![alt text](image.png) |
-| Cross-Entropy Loss | \( L(y,\hat{y}) = -\big[y\log(\hat{y}) + (1-y)\log(1-\hat{y})\big] \), penalizes confident wrong predictions in binary classification. |
-| Sigmoid and Probability | \( \sigma(w^\top x + b) = P(y=1 \mid x) \); taking the log converts probability products into sums, yielding a convex, numerically stable loss for optimization. |
-| Gradient Descent (Logistic Regression) | \( \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_{i=1}^n L(y_i, \sigma(w^\top x_i + b)) \), iteratively updates parameters to minimize cross-entropy loss. |
-| Logistic Regression Regularization | \( L(\theta) = -\frac{1}{n} \big[ y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta)) \big] + \lambda \|\theta\|^2 \), adding a penalty on parameter magnitude to reduce overfitting. |
-| Regularization Parameter (\( \lambda \)) | A hyperparameter controlling the strength of regularization, balancing fit to training data and model complexity. |
-| Regularization Uses | Helps prevent overfitting, improves generalization, stabilizes parameter estimates, and can enforce sparsity (e.g., L1). |
-| Important Hyperparameters (Logistic Regression) | Includes learning rate \( \eta \), number of iterations, feature dimensions, and regularization constant \( \lambda \), all affecting convergence and generalization. |
+| Perceptron | A binary linear classifier: \( f(x) = \operatorname{sign}(w^\top x + b) \). |
+| Perceptron Through Origin | Perceptron with no bias term (\( b = 0 \)), hyperplane passes through origin. |
+| Perceptron Intuition | Adjust decision boundary to correctly classify misclassified points. |
+| Perceptron Algorithm | Iteratively updates \( w \) and \( b \) using misclassified points until convergence. |
+| Margin of Data Point | Perpendicular distance from a point to the decision boundary: \( \gamma_i = \frac{y_i (w^\top x_i + b)}{\|w\|} \). |
+| Margin of Dataset | Smallest margin among all points: \( \gamma = \min_i \gamma_i \). |
+| Perceptron Convergence | If dataset is linearly separable with margin \( \gamma \), the algorithm converges in at most \( \frac{R^2}{\gamma^2} \) updates, \( R = \max_i \|x_i\| \). |
+| Logistic Regression | Linear classifier estimating class probabilities using sigmoid function. |
+| Logistic Regression Hypothesis | \( h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} \), models \( P(y=1 \mid x) \). |
+| Sigmoid Function | \( \sigma(z) = \frac{1}{1 + e^{-z}} \), maps real-valued inputs to probabilities in (0,1). |
+| Sigmoid Characteristics | S-shaped, monotonic, differentiable, vanishing gradients for large \(|z|\). |
+| Sigmoid Function (Visualization) | Plot of \( \sigma(z) \), showing smooth S-shaped transition from 0 to 1. |
+| Cross-Entropy Loss | \( L(y,\hat{y}) = -[y \log(\hat{y}) + (1-y) \log(1-\hat{y})] \), penalizes confident wrong predictions. |
+| Sigmoid and Probability | \( \sigma(w^\top x + b) = P(y=1 \mid x) \); log converts products into sums for convex, stable optimization. |
+| Gradient Descent (Logistic Regression) | \( \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_i L(y_i, \sigma(w^\top x_i + b)) \), updates parameters to minimize loss. |
+| Logistic Regression Regularization | \( L(\theta) = -\frac{1}{n} [y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta))] + \lambda \|\theta\|^2 \), reduces overfitting. |
+| Regularization Parameter (\( \lambda \)) | Controls regularization strength, balancing fit and complexity. |
+| Regularization Uses | Prevents overfitting, improves generalization, stabilizes parameters, can enforce sparsity. |
+| Important Hyperparameters (Logistic Regression) | Learning rate \( \eta \), number of iterations, feature dimensions, regularization constant \( \lambda \). |
 
 ## 🧩 Clustering
 
