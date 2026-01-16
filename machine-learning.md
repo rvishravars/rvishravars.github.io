@@ -10,7 +10,72 @@ permalink: /machine-learning/
 
 Below is a collection of core ML terms and their overly simplistic one line explanations.
 
-## 🧩 Clustering I & II
+## Six steps in Machine learning
+
+| Term | One-Line Explanation |
+|-----|----------------------|
+| Get Data | Collect and prepare the raw data needed for learning. |
+| Space of Possible Solutions | Define the set of models or hypotheses the system is allowed to choose from. |
+| Characterise Objective | Specify what the model should optimize, such as minimizing error or maximizing accuracy. |
+| Find Algorithm | Select a learning method to search the solution space effectively. |
+| Run | Execute the algorithm on the data to learn model parameters. |
+| Validate | Evaluate performance on unseen data to assess generalization. |
+
+## Building blocks
+
+| Term | One-Line Explanation |
+|-----|----------------------|
+| Hypothesis | \( f_\theta \), a candidate function from the hypothesis class chosen to model the data. |
+| Parameter | \( \theta \), the values (e.g., weights and biases) learned from data during training. |
+| Hyperparameter | Settings like learning rate, regularization strength, or number of hidden units that are set **before training** and not learned from data. |
+| Loss Function | \( L(y, \hat{y}) \), a measure of disagreement between true labels and predictions. |
+| Train-Test Split | Dividing the dataset into training and test sets, e.g., 80%-20%, to train the model and evaluate its generalization on unseen data. |
+| Training Error | \( \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) \), the average loss on the training dataset. |
+| Test Error | \( \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) \), the average loss on unseen test data. |
+| Cross-Validation Error | The average error computed by training and validating on multiple splits of the data to estimate generalization. |
+| Best Straight Line | In linear regression, the line \( y = w^\top x + b \) that minimizes training loss (e.g., MSE) across the dataset. |
+| Overfitting | When a model fits the training data too closely, capturing noise and performing poorly on unseen data. |
+| Underfitting | When a model is too simple to capture the underlying pattern, leading to high error on both training and test data. |
+
+## 🧠 Classification
+| Term | One-Line Explanation |
+|-----|----------------------|
+| Hypothesis Class (Classification) | \( \mathcal{H} = \{ f_\theta : \mathcal{X} \rightarrow \{1,\dots,K\} \mid \theta \in \Theta \} \), the set of all classifiers mapping inputs to discrete class labels. |
+| Hypothesis | \( f_\theta \), a candidate function from the hypothesis class chosen to model the data. |
+| Parameter | \( \theta \), the values (e.g., weights and biases) learned from data during training. |
+| Feature Representation | \( x \in \mathcal{X} \), the vector of input features that encodes the raw data for the learning algorithm. |
+| Feature Transform | \( \phi(x) : \mathcal{X} \rightarrow \mathcal{F} \), a mapping that converts input features into a new space to make patterns easier to learn. |
+| Feature Transform Example | \( \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) \), lifting 2D inputs into a higher-dimensional space to make them linearly separable. |
+| One-Hot Encoding | Converts categorical values into binary vectors, e.g., for colors {Red, Green, Blue}, Red → [1, 0, 0], Green → [0, 1, 0], Blue → [0, 0, 1]. |
+| Feature Standardization | \( x' = \frac{x - \mu}{\sigma} \), rescales features to have zero mean and unit variance. |
+| Loss Function | \( L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) \), the cross-entropy loss measuring disagreement between true and predicted class probabilities. |
+| Training Set | \( \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) \), the average loss of the model on the training data. |
+| Test Set Error | \( \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) \), the average loss of the model on unseen test data. |
+| ML as Optimization | \( \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) \), learning as minimizing empirical risk over the hypothesis class. |
+| Linear Classifier (Sign Function) | \( f(x) = \operatorname{sign}(w^\top x + b) \), a binary classifier that assigns a class based on which side of the hyperplane the input lies. |
+| Types of Linear Classifiers | Perceptron, Logistic Regression, Linear SVM, and Least-Squares Classifier, all using linear decision boundaries in feature space. |
+| Linear Separability | A dataset is linearly separable if a hyperplane exists that perfectly separates classes. |
+| Perceptron | A binary linear classifier that predicts class labels using \( f(x) = \operatorname{sign}(w^\top x + b) \). |
+| Perceptron Through Origin | A perceptron with no bias term (\( b = 0 \)), so the hyperplane passes through the origin. |
+| Perceptron Intuition | Move the decision boundary to correctly classify misclassified points by adjusting weights in the direction of the input. |
+| Perceptron Algorithm | Iteratively updates weights \( w \) and bias \( b \) using misclassified points until convergence. |
+| Margin of Data Point | The perpendicular distance from a point to the decision boundary: \( \gamma_i = \frac{y_i (w^\top x_i + b)}{\|w\|} \). |
+| Margin of Dataset | The smallest margin among all points: \( \gamma = \min_i \gamma_i \), representing dataset separability. |
+| Perceptron Convergence | If the dataset is linearly separable with margin \( \gamma \), the perceptron algorithm finds a separating hyperplane in at most \( \frac{R^2}{\gamma^2} \) updates, where \( R = \max_i \|x_i\| \). |
+| Logistic Regression | A linear classification model that estimates class probabilities using the logistic (sigmoid) function. |
+| Logistic Regression Hypothesis | \( h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} \), modeling \( P(y=1 \mid x) \). |
+| Sigmoid Function | \( \sigma(z) = \frac{1}{1 + e^{-z}} \), a smooth function that maps real-valued inputs to probabilities in \( (0,1) \). |
+| Sigmoid Characteristics | S-shaped curve, outputs in \( (0,1) \), monotonic, differentiable, and has vanishing gradients for large \(|z|\). |
+| Sigmoid Function (Visualization) | Plot of \( \sigma(z) = \frac{1}{1 + e^{-z}} \), showing the smooth S-shaped transition from 0 to 1 as \( z \) increases. ![alt text](image.png) |
+| Cross-Entropy Loss | \( L(y,\hat{y}) = -\big[y\log(\hat{y}) + (1-y)\log(1-\hat{y})\big] \), penalizes confident wrong predictions in binary classification. |
+| Sigmoid and Probability | \( \sigma(w^\top x + b) = P(y=1 \mid x) \); taking the log converts probability products into sums, yielding a convex, numerically stable loss for optimization. |
+| Gradient Descent (Logistic Regression) | \( \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_{i=1}^n L(y_i, \sigma(w^\top x_i + b)) \), iteratively updates parameters to minimize cross-entropy loss. |
+| Logistic Regression Regularization | \( L(\theta) = -\frac{1}{n} \big[ y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta)) \big] + \lambda \|\theta\|^2 \), adding a penalty on parameter magnitude to reduce overfitting. |
+| Regularization Parameter (\( \lambda \)) | A hyperparameter controlling the strength of regularization, balancing fit to training data and model complexity. |
+| Regularization Uses | Helps prevent overfitting, improves generalization, stabilizes parameter estimates, and can enforce sparsity (e.g., L1). |
+| Important Hyperparameters (Logistic Regression) | Includes learning rate \( \eta \), number of iterations, feature dimensions, and regularization constant \( \lambda \), all affecting convergence and generalization. |
+
+## 🧩 Clustering
 
 | **Term** | **One-Line Explanation** |
 |-----------|---------------------------|
@@ -25,7 +90,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Hierarchical Clustering** | Builds nested clusters using either a bottom-up (agglomerative) or top-down (divisive) strategy. |
 | **Agglomerative Clustering** | Starts with each point as its own cluster and merges them iteratively based on distance. |
 
-## 🔁 Online Clustering I & II
+## 🔁 Online Clustering
 
 | **Term** | **One-Line Explanation** |
 |-----------|---------------------------|
@@ -37,7 +102,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Leader-Follower Algorithm** | Creates new clusters when incoming data exceed a distance threshold from all existing cluster centers. |
 | **Change Detection** | Identifies anomalies when new data fall outside a statistical “three-sigma” range. |
 
-## 📉 Dimension Reduction I & II
+## 📉 Dimension Reduction
 
 | **Term** | **One-Line Explanation** |
 |-----------|---------------------------|
@@ -52,7 +117,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Sammon’s Mapping** | A nonlinear MDS method that minimizes distance distortion between original and reduced spaces. |
 | **Isomap** | Uses graph geodesic distances to preserve manifold structure during dimension reduction. |
 
-## 🧠 Classification I–IV
+## 🧠 Advanced Classification
 
 | **Term** | **One-Line Explanation** |
 |-----------|---------------------------|
@@ -217,7 +282,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 ---
 
-## Transfer Learning 1
+## Transfer Learning
 
 | **Term** | **One-line Explanation** |
 |-----------|--------------------------|
