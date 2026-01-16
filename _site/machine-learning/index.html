@@ -3,23 +3,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Machine Learning | World of Vishravars</title>
+<title>Machine Learning | Notes and interests</title>
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Machine Learning" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="http://localhost:4000/machine-learning/" />
 <meta property="og:url" content="http://localhost:4000/machine-learning/" />
-<meta property="og:site_name" content="World of Vishravars" />
+<meta property="og:site_name" content="Notes and interests" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Machine Learning" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","headline":"Machine Learning","url":"http://localhost:4000/machine-learning/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="World of Vishravars" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Notes and interests" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">World of Vishravars</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Notes and interests</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -29,23 +29,282 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/software/architecture/">Architecture</a><a class="page-link" href="/software/databases/">Databases</a><a class="page-link" href="/software/design/">Design</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/writeup/">Writeups</a><a class="page-link" href="/machine-learning/">Machine Learning</a></div>
+        <div class="trigger"><a class="page-link" href="/software/design/">Design</a><a class="page-link" href="/software/">Software</a><a class="page-link" href="/philosophy/">Philosophy</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/writeup/">Writeups</a><a class="page-link" href="/machine-learning/">Machine Learning</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-  <header class="post-header">
-    <h1 class="post-title">Machine Learning</h1>
-  </header>
+<article class="post">
 
-  <div class="post-content">
-    <h1 id="machine-learning">Machine Learning</h1>
+    <header class="post-header">
+        <h1 class="post-title">Machine Learning</h1>
+    </header>
+
+    <div class="post-content">
+        <h1 id="machine-learning">Machine Learning</h1>
 
 <p><a href="/">← Back to Home</a></p>
 
-<h2 id="-clustering-i--ii">🧩 Clustering I &amp; II</h2>
+<p>Below is a collection of core ML terms and their overly simplistic one line explanations.</p>
+
+<h2 id="six-steps-in-machine-learning">Six steps in Machine learning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>One-Line Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Get Data</td>
+      <td>Collect and prepare the raw data needed for learning.</td>
+    </tr>
+    <tr>
+      <td>Space of Possible Solutions</td>
+      <td>Define the set of models or hypotheses the system is allowed to choose from.</td>
+    </tr>
+    <tr>
+      <td>Characterise Objective</td>
+      <td>Specify what the model should optimize, such as minimizing error or maximizing accuracy.</td>
+    </tr>
+    <tr>
+      <td>Find Algorithm</td>
+      <td>Select a learning method to search the solution space effectively.</td>
+    </tr>
+    <tr>
+      <td>Run</td>
+      <td>Execute the algorithm on the data to learn model parameters.</td>
+    </tr>
+    <tr>
+      <td>Validate</td>
+      <td>Evaluate performance on unseen data to assess generalization.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="building-blocks">Building blocks</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>One-Line Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hypothesis</td>
+      <td>$ f_\theta $, a candidate function from the hypothesis class chosen to model the data.</td>
+    </tr>
+    <tr>
+      <td>Parameter</td>
+      <td>$ \theta $, the values (e.g., weights and biases) learned from data during training.</td>
+    </tr>
+    <tr>
+      <td>Hyperparameter</td>
+      <td>Settings like learning rate, regularization strength, or number of hidden units that are set <strong>before training</strong> and not learned from data.</td>
+    </tr>
+    <tr>
+      <td>Loss Function</td>
+      <td>$ L(y, \hat{y}) $, a measure of disagreement between true labels and predictions.</td>
+    </tr>
+    <tr>
+      <td>Train-Test Split</td>
+      <td>Dividing the dataset into training and test sets, e.g., 80%-20%, to train the model and evaluate its generalization on unseen data.</td>
+    </tr>
+    <tr>
+      <td>Training Error</td>
+      <td>$ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training dataset.</td>
+    </tr>
+    <tr>
+      <td>Test Error</td>
+      <td>$ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data.</td>
+    </tr>
+    <tr>
+      <td>Cross-Validation Error</td>
+      <td>The average error computed by training and validating on multiple splits of the data to estimate generalization.</td>
+    </tr>
+    <tr>
+      <td>Best Straight Line</td>
+      <td>In linear regression, the line $ y = w^\top x + b $ that minimizes training loss (e.g., MSE) across the dataset.</td>
+    </tr>
+    <tr>
+      <td>Overfitting</td>
+      <td>When a model fits the training data too closely, capturing noise and performing poorly on unseen data.</td>
+    </tr>
+    <tr>
+      <td>Underfitting</td>
+      <td>When a model is too simple to capture the underlying pattern, leading to high error on both training and test data.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-classification">🧠 Classification</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>One-Line Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $</td>
+      <td>dfsdff</td>
+    </tr>
+    <tr>
+      <td>Hypothesis Class (Classification)</td>
+      <td>$ \mathcal{H} = { f_\theta : \mathcal{X} \rightarrow {1,\dots,K} \mid \theta \in \Theta } $, the set of all classifiers mapping inputs to discrete class labels.</td>
+    </tr>
+    <tr>
+      <td>Hypothesis</td>
+      <td>$ f_\theta $, a candidate function from the hypothesis class chosen to model the data.</td>
+    </tr>
+    <tr>
+      <td>Parameter</td>
+      <td>$ \theta $, the values (e.g., weights and biases) learned from data during training.</td>
+    </tr>
+    <tr>
+      <td>Feature Representation</td>
+      <td>$ x \in \mathcal{X} $, the vector of input features that encodes the raw data for the learning algorithm.</td>
+    </tr>
+    <tr>
+      <td>Feature Transform</td>
+      <td>$ \phi(x) : \mathcal{X} \rightarrow \mathcal{F} $, a mapping that converts input features into a new space to make patterns easier to learn.</td>
+    </tr>
+    <tr>
+      <td>Feature Transform Example</td>
+      <td>$ \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) $, lifting 2D inputs into a higher-dimensional space to make them linearly separable.</td>
+    </tr>
+    <tr>
+      <td>One-Hot Encoding</td>
+      <td>Converts categorical values into binary vectors, e.g., Red → [1,0,0], Green → [0,1,0], Blue → [0,0,1].</td>
+    </tr>
+    <tr>
+      <td>Feature Standardization</td>
+      <td>$ x’ = \frac{x - \mu}{\sigma} $, rescales features to have zero mean and unit variance.</td>
+    </tr>
+    <tr>
+      <td>Loss Function</td>
+      <td>$ L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) $, cross-entropy measuring disagreement between true and predicted probabilities.</td>
+    </tr>
+    <tr>
+      <td>Training Set</td>
+      <td>$ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training data.</td>
+    </tr>
+    <tr>
+      <td>Test Set Error</td>
+      <td>$ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data.</td>
+    </tr>
+    <tr>
+      <td>ML as Optimization</td>
+      <td>$ \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) $, minimizing empirical risk.</td>
+    </tr>
+    <tr>
+      <td>Linear Classifier (Sign Function)</td>
+      <td>$ f(x) = \operatorname{sign}(w^\top x + b) $, assigns class based on which side of the hyperplane the input lies.</td>
+    </tr>
+    <tr>
+      <td>Types of Linear Classifiers</td>
+      <td>Perceptron, Logistic Regression, Linear SVM, Least-Squares Classifier, all using linear decision boundaries.</td>
+    </tr>
+    <tr>
+      <td>Linear Separability</td>
+      <td>A dataset is linearly separable if a hyperplane exists that perfectly separates classes.</td>
+    </tr>
+    <tr>
+      <td>Perceptron</td>
+      <td>A binary linear classifier: $ f(x) = \operatorname{sign}(w^\top x + b) $.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Through Origin</td>
+      <td>Perceptron with no bias term ($ b = 0 $), hyperplane passes through origin.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Intuition</td>
+      <td>Adjust decision boundary to correctly classify misclassified points.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Algorithm</td>
+      <td>Iteratively updates $ w $ and $ b $ using misclassified points until convergence.</td>
+    </tr>
+    <tr>
+      <td>Margin of Data Point</td>
+      <td>Perpendicular distance from a point to the decision boundary: $ \gamma_i = \frac{y_i (w^\top x_i + b)}{\Vert w\Vert} $.</td>
+    </tr>
+    <tr>
+      <td>Margin of Dataset</td>
+      <td>Smallest margin among all points: $ \gamma = \min_i \gamma_i $.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Convergence</td>
+      <td>If dataset is linearly separable with margin $ \gamma $, the algorithm converges in at most $ \frac{R^2}{\gamma^2} $ updates, $ R = \max_i \Vert x_i\Vert $.</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>Linear classifier estimating class probabilities using sigmoid function.</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression Hypothesis</td>
+      <td>$ h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} $, models $ P(y=1 \mid x) $.</td>
+    </tr>
+    <tr>
+      <td>Sigmoid Function</td>
+      <td>$ \sigma(z) = \frac{1}{1 + e^{-z}} $, maps real-valued inputs to probabilities in (0,1).</td>
+    </tr>
+    <tr>
+      <td>Sigmoid Characteristics</td>
+      <td>S-shaped, monotonic, differentiable, vanishing gradients for large $\vert z\vert$.</td>
+    </tr>
+    <tr>
+      <td>Sigmoid Function (Visualization)</td>
+      <td>Plot of $ \sigma(z) $, showing smooth S-shaped transition from 0 to 1.</td>
+    </tr>
+    <tr>
+      <td>Cross-Entropy Loss</td>
+      <td>$ L(y,\hat{y}) = -[y \log(\hat{y}) + (1-y) \log(1-\hat{y})] $, penalizes confident wrong predictions.</td>
+    </tr>
+    <tr>
+      <td>Sigmoid and Probability</td>
+      <td>$ \sigma(w^\top x + b) = P(y=1 \mid x) $; log converts products into sums for convex, stable optimization.</td>
+    </tr>
+    <tr>
+      <td>Gradient Descent (Logistic Regression)</td>
+      <td>$ \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_i L(y_i, \sigma(w^\top x_i + b)) $, updates parameters to minimize loss.</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression Regularization</td>
+      <td>$ L(\theta) = -\frac{1}{n} [y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta))] + \lambda \Vert\theta\Vert^2 $, reduces overfitting.</td>
+    </tr>
+    <tr>
+      <td>Regularization Parameter ($ \lambda $)</td>
+      <td>Controls regularization strength, balancing fit and complexity.</td>
+    </tr>
+    <tr>
+      <td>Regularization Uses</td>
+      <td>Prevents overfitting, improves generalization, stabilizes parameters, can enforce sparsity.</td>
+    </tr>
+    <tr>
+      <td>Important Hyperparameters (Logistic Regression)</td>
+      <td>Learning rate $ \eta $, number of iterations, feature dimensions, regularization constant $ \lambda $.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-clustering">🧩 Clustering</h2>
 
 <table>
   <thead>
@@ -98,7 +357,7 @@
   </tbody>
 </table>
 
-<h2 id="-online-clustering-i--ii">🔁 Online Clustering I &amp; II</h2>
+<h2 id="-online-clustering">🔁 Online Clustering</h2>
 
 <table>
   <thead>
@@ -139,7 +398,7 @@
   </tbody>
 </table>
 
-<h2 id="-dimension-reduction-i--ii">📉 Dimension Reduction I &amp; II</h2>
+<h2 id="-dimension-reduction">📉 Dimension Reduction</h2>
 
 <table>
   <thead>
@@ -192,7 +451,7 @@
   </tbody>
 </table>
 
-<h2 id="-classification-iiv">🧠 Classification I–IV</h2>
+<h2 id="-advanced-classification">🧠 Advanced Classification</h2>
 
 <table>
   <thead>
@@ -728,7 +987,7 @@
 
 <hr />
 
-<h2 id="transfer-learning-1">Transfer Learning 1</h2>
+<h2 id="transfer-learning">Transfer Learning</h2>
 
 <table>
   <thead>
@@ -939,22 +1198,21 @@
 
 <p><a href="#machine-learning">↑ Back to Top</a></p>
 
-  </div>
+    </div>
 
 </article>
-
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">World of Vishravars</h2>
+    <h2 class="footer-heading">Notes and interests</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">World of Vishravars</li><li><a class="u-email" href="mailto:vishravars@gmail.com">vishravars@gmail.com</a></li></ul>
+          <li class="p-name">Notes and interests</li><li><a class="u-email" href="mailto:vishravars@gmail.com">vishravars@gmail.com</a></li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/rvishravars"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">rvishravars</span></a></li></ul>

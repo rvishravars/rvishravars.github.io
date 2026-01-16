@@ -25,55 +25,57 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 | Term | One-Line Explanation |
 |-----|----------------------|
-| Hypothesis | \( f_\theta \), a candidate function from the hypothesis class chosen to model the data. |
-| Parameter | \( \theta \), the values (e.g., weights and biases) learned from data during training. |
+| Hypothesis | $ f_\theta $, a candidate function from the hypothesis class chosen to model the data. |
+| Parameter | $ \theta $, the values (e.g., weights and biases) learned from data during training. |
 | Hyperparameter | Settings like learning rate, regularization strength, or number of hidden units that are set **before training** and not learned from data. |
-| Loss Function | \( L(y, \hat{y}) \), a measure of disagreement between true labels and predictions. |
+| Loss Function | $ L(y, \hat{y}) $, a measure of disagreement between true labels and predictions. |
 | Train-Test Split | Dividing the dataset into training and test sets, e.g., 80%-20%, to train the model and evaluate its generalization on unseen data. |
-| Training Error | \( \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) \), the average loss on the training dataset. |
-| Test Error | \( \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) \), the average loss on unseen test data. |
+| Training Error | $ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training dataset. |
+| Test Error | $ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data. |
 | Cross-Validation Error | The average error computed by training and validating on multiple splits of the data to estimate generalization. |
-| Best Straight Line | In linear regression, the line \( y = w^\top x + b \) that minimizes training loss (e.g., MSE) across the dataset. |
+| Best Straight Line | In linear regression, the line $ y = w^\top x + b $ that minimizes training loss (e.g., MSE) across the dataset. |
 | Overfitting | When a model fits the training data too closely, capturing noise and performing poorly on unseen data. |
 | Underfitting | When a model is too simple to capture the underlying pattern, leading to high error on both training and test data. |
 
 ## 🧠 Classification
+
 | Term | One-Line Explanation |
 |-----|----------------------|
-| Hypothesis Class (Classification) | \( \mathcal{H} = \{ f_\theta : \mathcal{X} \rightarrow \{1,\dots,K\} \mid \theta \in \Theta \} \), the set of all classifiers mapping inputs to discrete class labels. |
-| Hypothesis | \( f_\theta \), a candidate function from the hypothesis class chosen to model the data. |
-| Parameter | \( \theta \), the values (e.g., weights and biases) learned from data during training. |
-| Feature Representation | \( x \in \mathcal{X} \), the vector of input features that encodes the raw data for the learning algorithm. |
-| Feature Transform | \( \phi(x) : \mathcal{X} \rightarrow \mathcal{F} \), a mapping that converts input features into a new space to make patterns easier to learn. |
-| Feature Transform Example | \( \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) \), lifting 2D inputs into a higher-dimensional space to make them linearly separable. |
+| $ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $ | dfsdff |
+| Hypothesis Class (Classification) | $ \mathcal{H} = \{ f_\theta : \mathcal{X} \rightarrow \{1,\dots,K\} \mid \theta \in \Theta \} $, the set of all classifiers mapping inputs to discrete class labels. |
+| Hypothesis | $ f_\theta $, a candidate function from the hypothesis class chosen to model the data. |
+| Parameter | $ \theta $, the values (e.g., weights and biases) learned from data during training. |
+| Feature Representation | $ x \in \mathcal{X} $, the vector of input features that encodes the raw data for the learning algorithm. |
+| Feature Transform | $ \phi(x) : \mathcal{X} \rightarrow \mathcal{F} $, a mapping that converts input features into a new space to make patterns easier to learn. |
+| Feature Transform Example | $ \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) $, lifting 2D inputs into a higher-dimensional space to make them linearly separable. |
 | One-Hot Encoding | Converts categorical values into binary vectors, e.g., Red → [1,0,0], Green → [0,1,0], Blue → [0,0,1]. |
-| Feature Standardization | \( x' = \frac{x - \mu}{\sigma} \), rescales features to have zero mean and unit variance. |
-| Loss Function | \( L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) \), cross-entropy measuring disagreement between true and predicted probabilities. |
-| Training Set | \( \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) \), the average loss on the training data. |
-| Test Set Error | \( \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) \), the average loss on unseen test data. |
-| ML as Optimization | \( \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) \), minimizing empirical risk. |
-| Linear Classifier (Sign Function) | \( f(x) = \operatorname{sign}(w^\top x + b) \), assigns class based on which side of the hyperplane the input lies. |
+| Feature Standardization | $ x' = \frac{x - \mu}{\sigma} $, rescales features to have zero mean and unit variance. |
+| Loss Function | $ L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) $, cross-entropy measuring disagreement between true and predicted probabilities. |
+| Training Set | $ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training data. |
+| Test Set Error | $ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data. |
+| ML as Optimization | $ \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) $, minimizing empirical risk. |
+| Linear Classifier (Sign Function) | $ f(x) = \operatorname{sign}(w^\top x + b) $, assigns class based on which side of the hyperplane the input lies. |
 | Types of Linear Classifiers | Perceptron, Logistic Regression, Linear SVM, Least-Squares Classifier, all using linear decision boundaries. |
 | Linear Separability | A dataset is linearly separable if a hyperplane exists that perfectly separates classes. |
-| Perceptron | A binary linear classifier: \( f(x) = \operatorname{sign}(w^\top x + b) \). |
-| Perceptron Through Origin | Perceptron with no bias term (\( b = 0 \)), hyperplane passes through origin. |
+| Perceptron | A binary linear classifier: $ f(x) = \operatorname{sign}(w^\top x + b) $. |
+| Perceptron Through Origin | Perceptron with no bias term ($ b = 0 $), hyperplane passes through origin. |
 | Perceptron Intuition | Adjust decision boundary to correctly classify misclassified points. |
-| Perceptron Algorithm | Iteratively updates \( w \) and \( b \) using misclassified points until convergence. |
-| Margin of Data Point | Perpendicular distance from a point to the decision boundary: \( \gamma_i = \frac{y_i (w^\top x_i + b)}{\|w\|} \). |
-| Margin of Dataset | Smallest margin among all points: \( \gamma = \min_i \gamma_i \). |
-| Perceptron Convergence | If dataset is linearly separable with margin \( \gamma \), the algorithm converges in at most \( \frac{R^2}{\gamma^2} \) updates, \( R = \max_i \|x_i\| \). |
+| Perceptron Algorithm | Iteratively updates $ w $ and $ b $ using misclassified points until convergence. |
+| Margin of Data Point | Perpendicular distance from a point to the decision boundary: $ \gamma_i = \frac{y_i (w^\top x_i + b)}{\Vert w\Vert} $. |
+| Margin of Dataset | Smallest margin among all points: $ \gamma = \min_i \gamma_i $. |
+| Perceptron Convergence | If dataset is linearly separable with margin $ \gamma $, the algorithm converges in at most $ \frac{R^2}{\gamma^2} $ updates, $ R = \max_i \Vert x_i\Vert $. |
 | Logistic Regression | Linear classifier estimating class probabilities using sigmoid function. |
-| Logistic Regression Hypothesis | \( h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} \), models \( P(y=1 \mid x) \). |
-| Sigmoid Function | \( \sigma(z) = \frac{1}{1 + e^{-z}} \), maps real-valued inputs to probabilities in (0,1). |
-| Sigmoid Characteristics | S-shaped, monotonic, differentiable, vanishing gradients for large \(|z|\). |
-| Sigmoid Function (Visualization) | Plot of \( \sigma(z) \), showing smooth S-shaped transition from 0 to 1. |
-| Cross-Entropy Loss | \( L(y,\hat{y}) = -[y \log(\hat{y}) + (1-y) \log(1-\hat{y})] \), penalizes confident wrong predictions. |
-| Sigmoid and Probability | \( \sigma(w^\top x + b) = P(y=1 \mid x) \); log converts products into sums for convex, stable optimization. |
-| Gradient Descent (Logistic Regression) | \( \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_i L(y_i, \sigma(w^\top x_i + b)) \), updates parameters to minimize loss. |
-| Logistic Regression Regularization | \( L(\theta) = -\frac{1}{n} [y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta))] + \lambda \|\theta\|^2 \), reduces overfitting. |
-| Regularization Parameter (\( \lambda \)) | Controls regularization strength, balancing fit and complexity. |
+| Logistic Regression Hypothesis | $ h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} $, models $ P(y=1 \mid x) $. |
+| Sigmoid Function | $ \sigma(z) = \frac{1}{1 + e^{-z}} $, maps real-valued inputs to probabilities in (0,1). |
+| Sigmoid Characteristics | S-shaped, monotonic, differentiable, vanishing gradients for large $\vert z\vert$. |
+| Sigmoid Function (Visualization) | Plot of $ \sigma(z) $, showing smooth S-shaped transition from 0 to 1. |
+| Cross-Entropy Loss | $ L(y,\hat{y}) = -[y \log(\hat{y}) + (1-y) \log(1-\hat{y})] $, penalizes confident wrong predictions. |
+| Sigmoid and Probability | $ \sigma(w^\top x + b) = P(y=1 \mid x) $; log converts products into sums for convex, stable optimization. |
+| Gradient Descent (Logistic Regression) | $ \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_i L(y_i, \sigma(w^\top x_i + b)) $, updates parameters to minimize loss. |
+| Logistic Regression Regularization | $ L(\theta) = -\frac{1}{n} [y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta))] + \lambda \Vert\theta\Vert^2 $, reduces overfitting. |
+| Regularization Parameter ($ \lambda $) | Controls regularization strength, balancing fit and complexity. |
 | Regularization Uses | Prevents overfitting, improves generalization, stabilizes parameters, can enforce sparsity. |
-| Important Hyperparameters (Logistic Regression) | Learning rate \( \eta \), number of iterations, feature dimensions, regularization constant \( \lambda \). |
+| Important Hyperparameters (Logistic Regression) | Learning rate $ \eta $, number of iterations, feature dimensions, regularization constant $ \lambda $. |
 
 ## 🧩 Clustering
 
