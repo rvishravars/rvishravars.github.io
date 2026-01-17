@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Fundamental Terms | Notes and interests</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Fundamental Terms" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/machine-learning/fundamental-terms/" />
+<meta property="og:url" content="http://localhost:4000/machine-learning/fundamental-terms/" />
+<meta property="og:site_name" content="Notes and interests" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fundamental Terms" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"Fundamental Terms","url":"http://localhost:4000/machine-learning/fundamental-terms/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Notes and interests" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Notes and interests</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/software/">Software</a><a class="page-link" href="/machine-learning/">Machine Learning</a><a class="page-link" href="/western-classical-music/">Western classical music</a><a class="page-link" href="/philosophy/">Philosophy</a><a class="page-link" href="/writeup/">Writeups</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<article class="post">
+
+    <header class="post-header">
+        <h1 class="post-title">Fundamental Terms</h1>
+    </header>
+
+    <div class="post-content">
+        <h1 id="fundamental-terms">Fundamental Terms</h1>
+
+<p><a href="/machine-learning/">← Back to Machine Learning</a></p>
+
+<p>Below is a collection of core ML terms and their overly simplistic one line explanations.</p>
+
+<h2 id="-six-steps-in-machine-learning">👣 Six steps in Machine learning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>One-Line Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Get Data</td>
+      <td>Collect and prepare the raw data needed for learning.</td>
+    </tr>
+    <tr>
+      <td>Space of Possible Solutions</td>
+      <td>Define the set of models or hypotheses the system is allowed to choose from.</td>
+    </tr>
+    <tr>
+      <td>Characterise Objective</td>
+      <td>Specify what the model should optimize, such as minimizing error or maximizing accuracy.</td>
+    </tr>
+    <tr>
+      <td>Find Algorithm</td>
+      <td>Select a learning method to search the solution space effectively.</td>
+    </tr>
+    <tr>
+      <td>Run</td>
+      <td>Execute the algorithm on the data to learn model parameters.</td>
+    </tr>
+    <tr>
+      <td>Validate</td>
+      <td>Evaluate performance on unseen data to assess generalization.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-building-blocks">🧱 Building blocks</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>One-Line Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hypothesis</td>
+      <td>$ f_\theta $, a candidate function from the hypothesis class chosen to model the data.</td>
+    </tr>
+    <tr>
+      <td>Parameter</td>
+      <td>$ \theta $, the values (e.g., weights and biases) learned from data during training.</td>
+    </tr>
+    <tr>
+      <td>Hyperparameter</td>
+      <td>Settings like learning rate, regularization strength, or number of hidden units that are set <strong>before training</strong> and not learned from data.</td>
+    </tr>
+    <tr>
+      <td>Loss Function</td>
+      <td>$ L(y, \hat{y}) $, a measure of disagreement between true labels and predictions (single example).</td>
+    </tr>
+    <tr>
+      <td>Cost Function</td>
+      <td>$ J(\theta) = \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the aggregation of loss over the entire training set.</td>
+    </tr>
+    <tr>
+      <td>Train-Test Split</td>
+      <td>Dividing the dataset into training and test sets, e.g., 80%-20%, to train the model and evaluate its generalization on unseen data.</td>
+    </tr>
+    <tr>
+      <td>Training Error</td>
+      <td>$ \frac{1}{n} \sum_{i=1}^{n} L(f(x_i), y_i) $, the average loss on the training dataset.</td>
+    </tr>
+    <tr>
+      <td>Test Error</td>
+      <td>$ \frac{1}{m} \sum_{j=1}^{m} L(f(x_j^{test}), y_j^{test}) $, the average loss on unseen test data.</td>
+    </tr>
+    <tr>
+      <td>Cross-Validation Error</td>
+      <td>The average error computed by training and validating on multiple splits of the data to estimate generalization.</td>
+    </tr>
+    <tr>
+      <td>Best Straight Line</td>
+      <td>In linear regression, the line $ y = w^\top x + b $ that minimizes training loss (e.g., MSE) across the dataset.</td>
+    </tr>
+    <tr>
+      <td>Overfitting</td>
+      <td>When a model fits the training data too closely, capturing noise and performing poorly on unseen data.</td>
+    </tr>
+    <tr>
+      <td>Underfitting</td>
+      <td>When a model is too simple to capture the underlying pattern, leading to high error on both training and test data.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-classification">🧠 Classification</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>One-Line Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hypothesis Class (Classification)</td>
+      <td>$ \mathcal{H} = { f_\theta : \mathcal{X} \rightarrow {1,\dots,K} \mid \theta \in \Theta } $, the set of all classifiers mapping inputs to discrete class labels.</td>
+    </tr>
+    <tr>
+      <td>Feature Representation</td>
+      <td>$ x \in \mathcal{X} $, the vector of input features that encodes the raw data for the learning algorithm.</td>
+    </tr>
+    <tr>
+      <td>Feature Transform</td>
+      <td>$ \phi(x) : \mathcal{X} \rightarrow \mathcal{F} $, a mapping that converts input features into a new space to make patterns easier to learn.</td>
+    </tr>
+    <tr>
+      <td>Feature Transform Example</td>
+      <td>$ \phi(x_1, x_2) = (x_1, x_2, x_1^2, x_2^2, x_1 x_2) $, lifting 2D inputs into a higher-dimensional space to make them linearly separable.</td>
+    </tr>
+    <tr>
+      <td>One-Hot Encoding</td>
+      <td>Converts categorical values into binary vectors, e.g., Red → [1,0,0], Green → [0,1,0], Blue → [0,0,1].</td>
+    </tr>
+    <tr>
+      <td>Feature Standardization</td>
+      <td>$ x’ = \frac{x - \mu}{\sigma} $, rescales features to have zero mean and unit variance.</td>
+    </tr>
+    <tr>
+      <td>Loss Function</td>
+      <td>$ L(y, \hat{y}) = -\sum_{k=1}^{K} \mathbf{1}[y = k] \log p_\theta(y = k \mid x) $, cross-entropy measuring disagreement between true and predicted probabilities.</td>
+    </tr>
+    <tr>
+      <td>ML as Optimization</td>
+      <td>$ \theta^* = \arg\min_{\theta \in \Theta} \frac{1}{n} \sum_{i=1}^{n} L(f_\theta(x_i), y_i) $, minimizing empirical risk.</td>
+    </tr>
+    <tr>
+      <td>Linear Classifier (Sign Function)</td>
+      <td>$ f(x) = \operatorname{sign}(w^\top x + b) $, assigns class based on which side of the hyperplane the input lies.</td>
+    </tr>
+    <tr>
+      <td>Types of Linear Classifiers</td>
+      <td>Perceptron, Logistic Regression, Linear SVM, Least-Squares Classifier, all using linear decision boundaries.</td>
+    </tr>
+    <tr>
+      <td>Linear Separability</td>
+      <td>A dataset is linearly separable if a hyperplane exists that perfectly separates classes.</td>
+    </tr>
+    <tr>
+      <td>Perceptron</td>
+      <td>A binary linear classifier: $ f(x) = \operatorname{sign}(w^\top x + b) $.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Through Origin</td>
+      <td>Perceptron with no bias term ($ b = 0 $), hyperplane passes through origin.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Intuition</td>
+      <td>Adjust decision boundary to correctly classify misclassified points.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Algorithm</td>
+      <td>Iteratively updates $ w $ and $ b $ using misclassified points until convergence.</td>
+    </tr>
+    <tr>
+      <td>Margin of Data Point</td>
+      <td>Perpendicular distance from a point to the decision boundary: $ \gamma_i = \frac{y_i (w^\top x_i + b)}{\Vert w\Vert} $.</td>
+    </tr>
+    <tr>
+      <td>Margin of Dataset</td>
+      <td>Smallest margin among all points: $ \gamma = \min_i \gamma_i $.</td>
+    </tr>
+    <tr>
+      <td>Perceptron Convergence</td>
+      <td>If dataset is linearly separable with margin $ \gamma $, the algorithm converges in at most $ \frac{R^2}{\gamma^2} $ updates, $ R = \max_i \Vert x_i\Vert $.</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>Linear classifier estimating class probabilities using sigmoid function.</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression Hypothesis</td>
+      <td>$ h_\theta(x) = \sigma(w^\top x + b) = \frac{1}{1 + e^{-(w^\top x + b)}} $, models $ P(y=1 \mid x) $.</td>
+    </tr>
+    <tr>
+      <td>Sigmoid Function</td>
+      <td>$ \sigma(z) = \frac{1}{1 + e^{-z}} $, maps real-valued inputs to probabilities in (0,1).</td>
+    </tr>
+    <tr>
+      <td>Sigmoid Characteristics</td>
+      <td>S-shaped, monotonic, differentiable, vanishing gradients for large $\vert z\vert$.</td>
+    </tr>
+    <tr>
+      <td>Sigmoid Function (Visualization)</td>
+      <td>Plot of $ \sigma(z) $, showing smooth S-shaped transition from 0 to 1.</td>
+    </tr>
+    <tr>
+      <td>Cross-Entropy Loss</td>
+      <td>$ L(y,\hat{y}) = -[y \log(\hat{y}) + (1-y) \log(1-\hat{y})] $, penalizes confident wrong predictions.</td>
+    </tr>
+    <tr>
+      <td>Sigmoid and Probability</td>
+      <td>$ \sigma(w^\top x + b) = P(y=1 \mid x) $; log converts products into sums for convex, stable optimization.</td>
+    </tr>
+    <tr>
+      <td>Gradient Descent (Logistic Regression)</td>
+      <td>$ \theta \leftarrow \theta - \eta \nabla_\theta \frac{1}{n}\sum_i L(y_i, \sigma(w^\top x_i + b)) $, updates parameters to minimize loss.</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression Regularization</td>
+      <td>$ L(\theta) = -\frac{1}{n} [y^\top \log(\sigma(X\theta)) + (1-y)^\top \log(1-\sigma(X\theta))] + \lambda \Vert\theta\Vert^2 $, reduces overfitting.</td>
+    </tr>
+    <tr>
+      <td>Regularization Parameter ($ \lambda $)</td>
+      <td>Controls regularization strength, balancing fit and complexity.</td>
+    </tr>
+    <tr>
+      <td>Regularization Uses</td>
+      <td>Prevents overfitting, improves generalization, stabilizes parameters, can enforce sparsity.</td>
+    </tr>
+    <tr>
+      <td>Important Hyperparameters (Logistic Regression)</td>
+      <td>Learning rate $ \eta $, number of iterations, feature dimensions, regularization constant $ \lambda $.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-linear-regression">📉 Linear Regression</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-Line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Linear Regression Hypothesis</strong></td>
+      <td>$ h_\theta(x) = w^\top x + b $, predicting a continuous value as a weighted sum of features.</td>
+    </tr>
+    <tr>
+      <td><strong>Residual (Error)</strong></td>
+      <td>$ e_i = y_i - \hat{y}_i $, the difference between the true value and the predicted value.</td>
+    </tr>
+    <tr>
+      <td><strong>Ordinary Least Squares (OLS)</strong></td>
+      <td>A method that estimates parameters by minimizing the sum of squared residuals: $ \sum e_i^2 $ or in matrix form $ | X\theta - y |^2 $.</td>
+    </tr>
+    <tr>
+      <td><strong>Cost Function (MSE)</strong></td>
+      <td>$ J(\theta) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \frac{1}{n} | X\theta - y |^2 $, the objective function to be minimized.</td>
+    </tr>
+    <tr>
+      <td><strong>Normal Equation</strong></td>
+      <td>$ \theta = (X^\top X)^{-1} X^\top y $, the closed-form solution to finding the optimal parameters.</td>
+    </tr>
+    <tr>
+      <td><strong>Gradient Descent</strong></td>
+      <td>Iterative update: $ \theta \leftarrow \theta - \eta \frac{\partial J}{\partial \theta} $, moving parameters against the gradient to minimize error.</td>
+    </tr>
+    <tr>
+      <td><strong>R² (Coefficient of Determination)</strong></td>
+      <td>$ R^2 = 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} $, measuring the proportion of variance explained by the model.</td>
+    </tr>
+    <tr>
+      <td><strong>Assumptions</strong></td>
+      <td>Linearity, Homoscedasticity (constant variance), Independence of errors, and Normality of residuals.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-clustering">🧩 Clustering</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-Line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Clustering</strong></td>
+      <td>Grouping data points so that those within a cluster are more similar to each other than to those in other clusters.</td>
+    </tr>
+    <tr>
+      <td><strong>K-means</strong></td>
+      <td>A partitioning algorithm that iteratively assigns points to the nearest cluster mean and updates the means until convergence.</td>
+    </tr>
+    <tr>
+      <td><strong>k-means++</strong></td>
+      <td>A smart initialization method for k-means that spreads out initial cluster centers for better results.</td>
+    </tr>
+    <tr>
+      <td><strong>Fuzzy c-means</strong></td>
+      <td>A clustering method allowing data points to have fractional membership in multiple clusters.</td>
+    </tr>
+    <tr>
+      <td><strong>Expectation-Maximization (EM)</strong></td>
+      <td>Alternates between assigning data points to clusters (E-step) and updating cluster parameters (M-step) to maximize likelihood.</td>
+    </tr>
+    <tr>
+      <td><strong>Gaussian Mixture Model (GMM)</strong></td>
+      <td>Represents data as a mixture of multiple Gaussian distributions learned via EM.</td>
+    </tr>
+    <tr>
+      <td><strong>DBSCAN</strong></td>
+      <td>A density-based clustering algorithm that groups closely packed points and marks outliers as noise.</td>
+    </tr>
+    <tr>
+      <td><strong>Core Point</strong></td>
+      <td>A point with at least <em>MinPts</em> neighbors within distance <em>Eps</em>, forming the dense core of a cluster.</td>
+    </tr>
+    <tr>
+      <td><strong>Hierarchical Clustering</strong></td>
+      <td>Builds nested clusters using either a bottom-up (agglomerative) or top-down (divisive) strategy.</td>
+    </tr>
+    <tr>
+      <td><strong>Agglomerative Clustering</strong></td>
+      <td>Starts with each point as its own cluster and merges them iteratively based on distance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-online-clustering">🔁 Online Clustering</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-Line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Online Learning</strong></td>
+      <td>Processes data incrementally as it arrives, adapting models continuously.</td>
+    </tr>
+    <tr>
+      <td><strong>Online Averaging</strong></td>
+      <td>Updates the mean iteratively with each new data point using a learning rate γₙ.</td>
+    </tr>
+    <tr>
+      <td><strong>Competitive Learning (CL)</strong></td>
+      <td>Neurons compete to represent input data; only the winner updates its weight.</td>
+    </tr>
+    <tr>
+      <td><strong>Self-Organizing Map (SOM)</strong></td>
+      <td>Adds a topological structure so nearby neurons update together, forming organized feature maps.</td>
+    </tr>
+    <tr>
+      <td><strong>Neural Gas</strong></td>
+      <td>Removes SOM’s grid topology and ranks neurons by distance to ensure fair updates.</td>
+    </tr>
+    <tr>
+      <td><strong>Leader-Follower Algorithm</strong></td>
+      <td>Creates new clusters when incoming data exceed a distance threshold from all existing cluster centers.</td>
+    </tr>
+    <tr>
+      <td><strong>Change Detection</strong></td>
+      <td>Identifies anomalies when new data fall outside a statistical “three-sigma” range.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-dimension-reduction">📉 Dimension Reduction</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-Line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Principal Component Analysis (PCA)</strong></td>
+      <td>Projects data to directions (principal components) that maximize variance.</td>
+    </tr>
+    <tr>
+      <td><strong>Eigenvector</strong></td>
+      <td>The direction of maximum variance in PCA, representing a principal component.</td>
+    </tr>
+    <tr>
+      <td><strong>Eigenvalue</strong></td>
+      <td>Measures how much variance is captured by each eigenvector.</td>
+    </tr>
+    <tr>
+      <td><strong>Hebbian Learning</strong></td>
+      <td>Neural learning principle stating that “neurons that fire together wire together.”</td>
+    </tr>
+    <tr>
+      <td><strong>Oja’s Rule</strong></td>
+      <td>An online learning rule for neural PCA using Hebbian learning.</td>
+    </tr>
+    <tr>
+      <td><strong>Kernel Trick</strong></td>
+      <td>Computes dot products in a high-dimensional “feature” space without explicitly performing the transformation.</td>
+    </tr>
+    <tr>
+      <td><strong>Kernel PCA</strong></td>
+      <td>Extends PCA into a nonlinear feature space using kernel functions.</td>
+    </tr>
+    <tr>
+      <td><strong>Multi-Dimensional Scaling (MDS)</strong></td>
+      <td>Reduces dimensions by preserving pairwise distances between points.</td>
+    </tr>
+    <tr>
+      <td><strong>Sammon’s Mapping</strong></td>
+      <td>A nonlinear MDS method that minimizes distance distortion between original and reduced spaces.</td>
+    </tr>
+    <tr>
+      <td><strong>Isomap</strong></td>
+      <td>Uses graph geodesic distances to preserve manifold structure during dimension reduction.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-advanced-classification">🧠 Advanced Classification</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-Line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Supervised Learning</strong></td>
+      <td>Uses labeled data to train a model that predicts outcomes for unseen data.</td>
+    </tr>
+    <tr>
+      <td><strong>Unsupervised Learning</strong></td>
+      <td>Finds patterns in unlabeled data such as clusters or latent features.</td>
+    </tr>
+    <tr>
+      <td><strong>Bayes’ Theorem</strong></td>
+      <td>Updates probability estimates based on new evidence.</td>
+    </tr>
+    <tr>
+      <td><strong>Naïve Bayes Classifier</strong></td>
+      <td>Assumes feature independence and applies Bayes’ theorem for fast classification.</td>
+    </tr>
+    <tr>
+      <td><strong>k-Nearest Neighbour (k-NN)</strong></td>
+      <td>Classifies data points based on the majority class among their k nearest neighbors.</td>
+    </tr>
+    <tr>
+      <td><strong>Linear Discriminant Analysis (LDA)</strong></td>
+      <td>Projects data to maximize class separability using linear combinations of features.</td>
+    </tr>
+    <tr>
+      <td><strong>Learning Vector Quantization (LVQ)</strong></td>
+      <td>A supervised version of vector quantization that tunes prototypes using labeled data.</td>
+    </tr>
+    <tr>
+      <td><strong>Radial Basis Function (RBF) Network</strong></td>
+      <td>A neural model using Gaussian functions as hidden neurons to interpolate or classify data.</td>
+    </tr>
+    <tr>
+      <td><strong>Support Vector Machine (SVM)</strong></td>
+      <td>Finds an optimal hyperplane that maximizes the margin between classes.</td>
+    </tr>
+    <tr>
+      <td><strong>Decision Tree</strong></td>
+      <td>A tree-structured model that splits data recursively to reduce uncertainty or impurity.</td>
+    </tr>
+    <tr>
+      <td><strong>Entropy</strong></td>
+      <td>A measure of uncertainty or impurity in a dataset.</td>
+    </tr>
+    <tr>
+      <td><strong>Gini Index</strong></td>
+      <td>A simpler impurity measure used in decision tree algorithms like CART.</td>
+    </tr>
+    <tr>
+      <td><strong>Feature Importance</strong></td>
+      <td>Quantifies each feature’s contribution to reducing impurity in a decision tree.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="-feature-selection">🎯 Feature Selection</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Feature Selection</td>
+      <td>Process of choosing a subset of relevant features to improve model performance and interpretability.</td>
+    </tr>
+    <tr>
+      <td>Filter Method</td>
+      <td>Ranks features using statistical measures like correlation or mutual information.</td>
+    </tr>
+    <tr>
+      <td>Wrapper Method</td>
+      <td>Uses a learning algorithm to evaluate and select feature subsets through search strategies.</td>
+    </tr>
+    <tr>
+      <td>Embedded Method</td>
+      <td>Performs feature selection during model training (e.g., LASSO, decision trees).</td>
+    </tr>
+    <tr>
+      <td>Pearson Correlation</td>
+      <td>Measures linear dependence between a feature and the target variable.</td>
+    </tr>
+    <tr>
+      <td>Mutual Information</td>
+      <td>Quantifies how much a feature reduces uncertainty about the target variable.</td>
+    </tr>
+    <tr>
+      <td>Boruta Algorithm</td>
+      <td>Random forest-based method comparing real vs. shuffled “shadow” features.</td>
+    </tr>
+    <tr>
+      <td>SHAP Value</td>
+      <td>Game-theoretic approach to measure feature importance via contribution to predictions.</td>
+    </tr>
+    <tr>
+      <td>mRMR</td>
+      <td>Selects features that are maximally relevant to the target but minimally redundant.</td>
+    </tr>
+    <tr>
+      <td>Sequential Forward Selection</td>
+      <td>Adds one feature at a time that improves performance most.</td>
+    </tr>
+    <tr>
+      <td>Sequential Backward Elimination</td>
+      <td>Starts with all features, removes least useful features iteratively.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-performance-evaluation">📊 Performance Evaluation</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Confusion Matrix</td>
+      <td>Table summarizing true vs predicted classifications.</td>
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>Proportion of correctly classified samples.</td>
+    </tr>
+    <tr>
+      <td>Precision</td>
+      <td>Fraction of positive predictions that are correct.</td>
+    </tr>
+    <tr>
+      <td>Recall / Sensitivity</td>
+      <td>Fraction of true positives correctly identified.</td>
+    </tr>
+    <tr>
+      <td>Specificity</td>
+      <td>Fraction of true negatives correctly identified.</td>
+    </tr>
+    <tr>
+      <td>F1 Score</td>
+      <td>Harmonic mean of precision and recall.</td>
+    </tr>
+    <tr>
+      <td>MCC</td>
+      <td>Balanced metric for binary classification, effective for imbalanced data.</td>
+    </tr>
+    <tr>
+      <td>ROC Curve</td>
+      <td>Plots true positive rate vs. false positive rate at varying thresholds.</td>
+    </tr>
+    <tr>
+      <td>AUC</td>
+      <td>Area under the ROC curve; measures overall model discrimination ability.</td>
+    </tr>
+    <tr>
+      <td>Cross-Validation</td>
+      <td>Evaluates model performance using multiple data splits.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-regression">📈 Regression</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Regression</td>
+      <td>Predicts continuous numeric outcomes from input features.</td>
+    </tr>
+    <tr>
+      <td>In-sample Error</td>
+      <td>Error on the training data used for fitting the model.</td>
+    </tr>
+    <tr>
+      <td>Out-of-sample Error</td>
+      <td>Error on unseen test data, measuring generalization.</td>
+    </tr>
+    <tr>
+      <td>Polynomial Regression</td>
+      <td>Extends linear regression by including polynomial terms of inputs.</td>
+    </tr>
+    <tr>
+      <td>Gradient Descent</td>
+      <td>Iterative optimization method for minimizing loss.</td>
+    </tr>
+    <tr>
+      <td>Learning Rate</td>
+      <td>Step size determining how much to adjust parameters in gradient descent.</td>
+    </tr>
+    <tr>
+      <td>Regularization</td>
+      <td>Penalizes model complexity to prevent overfitting.</td>
+    </tr>
+    <tr>
+      <td>Ridge Regression</td>
+      <td>L2 regularization that shrinks coefficients to reduce variance.</td>
+    </tr>
+    <tr>
+      <td>LASSO Regression</td>
+      <td>L1 regularization that drives some coefficients to zero (feature selection).</td>
+    </tr>
+    <tr>
+      <td>Decision Tree Regressor</td>
+      <td>Splits data space recursively to minimize prediction error.</td>
+    </tr>
+    <tr>
+      <td>RMSE</td>
+      <td>Square root of mean squared error; penalizes large errors.</td>
+    </tr>
+    <tr>
+      <td>MAE</td>
+      <td>Mean of absolute prediction errors; less sensitive to outliers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-ensemble-learning">👯 Ensemble Learning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ensemble Learning</td>
+      <td>Combines multiple models to improve overall prediction accuracy.</td>
+    </tr>
+    <tr>
+      <td>Bagging</td>
+      <td>Trains models on bootstrapped samples and averages predictions.</td>
+    </tr>
+    <tr>
+      <td>Boosting</td>
+      <td>Sequentially trains models to focus on previous errors.</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td>Ensemble of decision trees using random feature and data sampling.</td>
+    </tr>
+    <tr>
+      <td>AdaBoost</td>
+      <td>Assigns higher weights to misclassified samples for next learner.</td>
+    </tr>
+    <tr>
+      <td>Gradient Boosting</td>
+      <td>Fits new models to residuals from previous models.</td>
+    </tr>
+    <tr>
+      <td>Voting</td>
+      <td>Combines predictions via majority or weighted averaging.</td>
+    </tr>
+    <tr>
+      <td>Diversity</td>
+      <td>Independence among base learners that improves ensemble performance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-model-selection">⚖️ Model Selection</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bias</td>
+      <td>Systematic error due to overly simple models.</td>
+    </tr>
+    <tr>
+      <td>Variance</td>
+      <td>Sensitivity to fluctuations in training data.</td>
+    </tr>
+    <tr>
+      <td>Bias-Variance Tradeoff</td>
+      <td>Balancing underfitting (bias) vs overfitting (variance).</td>
+    </tr>
+    <tr>
+      <td>AIC</td>
+      <td>Akaike Information Criterion for model comparison using likelihood and parameters.</td>
+    </tr>
+    <tr>
+      <td>BIC</td>
+      <td>Bayesian Information Criterion penalizing model complexity more strongly.</td>
+    </tr>
+    <tr>
+      <td>Hyperparameter Tuning</td>
+      <td>Adjusting non-learnable settings (e.g., k in KNN) to optimize performance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-multilayer-perceptron">🕸️ Multilayer Perceptron</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Activation Function</td>
+      <td>Nonlinear function applied to neuron outputs (e.g., ReLU, sigmoid).</td>
+    </tr>
+    <tr>
+      <td>Backpropagation</td>
+      <td>Algorithm to compute gradients and update weights in neural networks.</td>
+    </tr>
+    <tr>
+      <td>Momentum</td>
+      <td>Adds a fraction of previous weight update to speed convergence.</td>
+    </tr>
+    <tr>
+      <td>Vanishing Gradient</td>
+      <td>Gradients shrink in deep networks, hindering learning.</td>
+    </tr>
+    <tr>
+      <td>Mini-batch Gradient Descent</td>
+      <td>Uses small data subsets for faster, smoother updates.</td>
+    </tr>
+    <tr>
+      <td>ADAM</td>
+      <td>Adaptive optimization combining momentum and RMSprop ideas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-convolutional-neural-networks">🖼️ Convolutional Neural Networks</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Convolution</td>
+      <td>Operation applying filters over input data to extract features.</td>
+    </tr>
+    <tr>
+      <td>Pooling</td>
+      <td>Reduces spatial size while retaining important information.</td>
+    </tr>
+    <tr>
+      <td>LeNet-5</td>
+      <td>Early CNN architecture for digit recognition.</td>
+    </tr>
+    <tr>
+      <td>AlexNet</td>
+      <td>Deep CNN that popularized GPU training and ReLU activations.</td>
+    </tr>
+    <tr>
+      <td>YOLO</td>
+      <td>Real-time object detection architecture (“You Only Look Once”).</td>
+    </tr>
+    <tr>
+      <td>ResNet</td>
+      <td>Deep CNN using residual (skip) connections to ease training.</td>
+    </tr>
+    <tr>
+      <td>Vision Transformer</td>
+      <td>Applies attention mechanisms from NLP to image recognition.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-variational-autoencoder-vae">🎭 Variational Autoencoder (VAE)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Autoencoder</td>
+      <td>Neural network that reconstructs inputs from compressed latent space.</td>
+    </tr>
+    <tr>
+      <td>Variational Autoencoder</td>
+      <td>Probabilistic autoencoder learning a smooth latent distribution.</td>
+    </tr>
+    <tr>
+      <td>Encoder</td>
+      <td>Maps input data to latent variables.</td>
+    </tr>
+    <tr>
+      <td>Decoder</td>
+      <td>Reconstructs data from latent variables.</td>
+    </tr>
+    <tr>
+      <td>Latent Space</td>
+      <td>Compressed representation capturing essential features.</td>
+    </tr>
+    <tr>
+      <td>KL Divergence</td>
+      <td>Measures difference between two probability distributions.</td>
+    </tr>
+    <tr>
+      <td>Reparameterization Trick</td>
+      <td>Enables gradient-based learning through stochastic sampling.</td>
+    </tr>
+    <tr>
+      <td>ELBO</td>
+      <td>Evidence Lower Bound, objective function optimized in VAEs.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="️-generative-adversarial-network-gan">⚔️ Generative Adversarial Network (GAN)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GAN</td>
+      <td>Framework with generator and discriminator competing in a minimax game.</td>
+    </tr>
+    <tr>
+      <td>Generator</td>
+      <td>Produces synthetic data from random noise.</td>
+    </tr>
+    <tr>
+      <td>Discriminator</td>
+      <td>Distinguishes real data from generated data.</td>
+    </tr>
+    <tr>
+      <td>Minimax Game</td>
+      <td>Optimization framework where G tries to fool D and D tries to detect fakes.</td>
+    </tr>
+    <tr>
+      <td>Mode Collapse</td>
+      <td>Failure where generator produces limited data diversity.</td>
+    </tr>
+    <tr>
+      <td>Nash Equilibrium</td>
+      <td>State where neither G nor D can improve performance unilaterally.</td>
+    </tr>
+    <tr>
+      <td>CycleGAN</td>
+      <td>Uses cyclic consistency for image-to-image translation without paired data.</td>
+    </tr>
+    <tr>
+      <td>Super-Resolution GAN</td>
+      <td>Enhances image resolution using adversarial and perceptual loss.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-transfer-learning">🎓 Transfer Learning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Transfer Learning (TL)</strong></td>
+      <td>Applying knowledge learned in one domain/task to another related domain/task.</td>
+    </tr>
+    <tr>
+      <td><strong>Source Domain</strong></td>
+      <td>The domain providing prior knowledge or training data.</td>
+    </tr>
+    <tr>
+      <td><strong>Target Domain</strong></td>
+      <td>The new domain where learned knowledge is applied.</td>
+    </tr>
+    <tr>
+      <td><strong>Inductive Transfer Learning</strong></td>
+      <td>TL where labeled data exists in the target domain.</td>
+    </tr>
+    <tr>
+      <td><strong>Transductive Transfer Learning</strong></td>
+      <td>TL with labeled data only in the source domain.</td>
+    </tr>
+    <tr>
+      <td><strong>Unsupervised Transfer Learning</strong></td>
+      <td>TL where both domains lack labeled data.</td>
+    </tr>
+    <tr>
+      <td><strong>Self-taught Learning</strong></td>
+      <td>Learning features from unlabeled data and transferring them to labeled tasks.</td>
+    </tr>
+    <tr>
+      <td><strong>Domain Adaptation</strong></td>
+      <td>Adapting models from a source domain to an unlabeled target domain.</td>
+    </tr>
+    <tr>
+      <td><strong>Instance-based Transfer</strong></td>
+      <td>Re-weighting instances from the source domain to reduce domain bias.</td>
+    </tr>
+    <tr>
+      <td><strong>TrAdaBoost</strong></td>
+      <td>Boosting-based TL algorithm that adjusts instance weights between domains.</td>
+    </tr>
+    <tr>
+      <td><strong>Sparse Coding</strong></td>
+      <td>Learning sparse feature representations to transfer across domains.</td>
+    </tr>
+    <tr>
+      <td><strong>Hierarchical Transfer</strong></td>
+      <td>Multi-level knowledge transfer to handle complex or multi-task learning.</td>
+    </tr>
+    <tr>
+      <td><strong>Covariate Shift</strong></td>
+      <td>Situation where input distributions differ between training and testing domains.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-deep-transfer-learning">🤖 Deep Transfer Learning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Deep Transfer Learning (DTL)</strong></td>
+      <td>Using deep neural networks to transfer features or representations between domains.</td>
+    </tr>
+    <tr>
+      <td><strong>Domain Invariance</strong></td>
+      <td>Ensuring learned features are independent of domain differences.</td>
+    </tr>
+    <tr>
+      <td><strong>Adversarial Domain Adaptation (DANN)</strong></td>
+      <td>Using adversarial training to make feature representations domain-invariant.</td>
+    </tr>
+    <tr>
+      <td><strong>UNIT (Unsupervised Image-to-Image Translation)</strong></td>
+      <td>Framework combining VAE and GAN to translate images across domains.</td>
+    </tr>
+    <tr>
+      <td><strong>CGGS/DATL</strong></td>
+      <td>Cross-Grafted Generative Stacks / Deep Adversarial Transfer Learning; creates transition domains.</td>
+    </tr>
+    <tr>
+      <td><strong>Latent Space Mixup</strong></td>
+      <td>Mixing latent representations to create hybrid samples for domain generalization.</td>
+    </tr>
+    <tr>
+      <td><strong>CDLM (Cross-Domain Latent Modulation)</strong></td>
+      <td>A method to modulate latent variables for bi-directional domain adaptation.</td>
+    </tr>
+    <tr>
+      <td><strong>Taskonomy</strong></td>
+      <td>Study of task relationships to learn how tasks transfer knowledge efficiently.</td>
+    </tr>
+    <tr>
+      <td><strong>t-SNE Visualization</strong></td>
+      <td>A technique for visualizing high-dimensional domain representations.</td>
+    </tr>
+    <tr>
+      <td><strong>Affinity Matrix</strong></td>
+      <td>Measures transferability among tasks based on learned representations.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-federated-learning">📱 Federated Learning</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Federated Learning (FL)</strong></td>
+      <td>Collaborative training of models across multiple devices without sharing raw data.</td>
+    </tr>
+    <tr>
+      <td><strong>FedAvg</strong></td>
+      <td>A core FL algorithm that averages locally trained model weights across clients.</td>
+    </tr>
+    <tr>
+      <td><strong>Split Learning</strong></td>
+      <td>Dividing models between clients and servers to preserve data privacy.</td>
+    </tr>
+    <tr>
+      <td><strong>Data Heterogeneity</strong></td>
+      <td>Variation in local datasets across clients (non-IID data).</td>
+    </tr>
+    <tr>
+      <td><strong>Resource Heterogeneity</strong></td>
+      <td>Differences in client computational and communication capabilities.</td>
+    </tr>
+    <tr>
+      <td><strong>Hetero-FL</strong></td>
+      <td>Federated setup allowing clients to use different model architectures.</td>
+    </tr>
+    <tr>
+      <td><strong>FedMD</strong></td>
+      <td>FL framework using model distillation and transfer learning for heterogeneous clients.</td>
+    </tr>
+    <tr>
+      <td><strong>CloREF</strong></td>
+      <td>Rule-based collaborative FL method allowing different model types (e.g., RF, SVM).</td>
+    </tr>
+    <tr>
+      <td><strong>Gradient Inversion Attack</strong></td>
+      <td>Technique to reconstruct private data from shared gradients.</td>
+    </tr>
+    <tr>
+      <td><strong>Secure Aggregation</strong></td>
+      <td>Cryptographic protocol to protect individual client updates during aggregation.</td>
+    </tr>
+    <tr>
+      <td><strong>LOKI Attack</strong></td>
+      <td>Advanced data leakage attack that reconstructs data even in secure aggregation.</td>
+    </tr>
+    <tr>
+      <td><strong>Flower Framework</strong></td>
+      <td>Open-source framework for building and simulating federated learning systems.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-references">📚 References</h2>
+
+<ul>
+  <li>Pan &amp; Yang, <em>A Survey on Transfer Learning</em>, IEEE TKDE 2010.</li>
+  <li>Raina et al., <em>Self-taught Learning</em>, ICML 2007.</li>
+  <li>Ganin &amp; Lempitsky, <em>Unsupervised Domain Adaptation by Backpropagation (DANN)</em>, ICML 2015.</li>
+  <li>Liu et al., <em>UNIT: Unsupervised Image-to-Image Translation Networks</em>, NeurIPS 2017.</li>
+  <li>Xu et al., <em>Adversarial Domain Adaptation with Domain Mixup</em>, AAAI 2020.</li>
+  <li>Hou et al., <em>Cross-Domain Latent Modulation</em>, WACV 2021.</li>
+  <li>McMahan et al., <em>Communication-efficient Learning of Deep Networks from Decentralized Data</em>, AISTATS 2017.</li>
+  <li>Bonawitz et al., <em>Practical Secure Aggregation for Federated Learning</em>, NIPS 2016.</li>
+  <li>Pang et al., <em>Rule-based Collaborative Learning (CloREF)</em>, PAKDD 2022 / IEEE TKDE 2023.</li>
+</ul>
+
+<hr />
+
+<p><a href="#fundamental-terms">↑ Back to Top</a></p>
+
+    </div>
+
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Notes and interests</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Notes and interests</li><li><a class="u-email" href="mailto:vishravars@gmail.com">vishravars@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/rvishravars"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">rvishravars</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

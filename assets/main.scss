@@ -1,0 +1,22 @@
+--- # Only the main Sass file needs front matter (the dashes are enough) --- @import "minima";
+
+// Override alignment globally
+body,
+.home,
+.site-header,
+.site-nav,
+.site-title,
+.footer-col-wrapper,
+.wrapper {
+    text-align: left !important;
+}
+
+// Remove centered container margins
+.wrapper {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    max-width: 800px;
+    /* Keep reasonable reading width but aligned left */
+    padding-left: 40px;
+    /* Add breathing room */
+}

@@ -26,6 +26,13 @@ url: "https://rvishravars.github.io" # the base hostname & protocol for your sit
 twitter_username: 
 github_username: rvishravars
 
+header_pages:
+  - software/index.md
+  - machine-learning/index.md
+  - western-classical-music/index.md
+  - philosophy/index.md
+  - writeup/index.md
+
 # Build settings
 theme: minima
 markdown: kramdown
