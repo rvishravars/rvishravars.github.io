@@ -113,6 +113,13 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Parametric ReLU (PReLU)** | An adaptive version of Leaky ReLU where the negative slope $\alpha$ is learned during training rather than fixed. |
 | **Backpropagation (Chain Rule)** | $ \frac{\partial L}{\partial w} = \frac{\partial L}{\partial a} \cdot \frac{\partial a}{\partial z} \cdot \frac{\partial z}{\partial w} $, the recursive application of the chain rule to compute gradients for weight updates. |
 | **Momentum** | $ v_t = \gamma v_{t-1} + \eta \nabla J(\theta) $; accelerates training by accumulating past gradients to smooth out oscillations and pass local minima. |
+| **Convolution** | $ (I * K)_{ij} = \sum_{m,n} I_{i+m, j+n} K_{mn} $; slides a learnable filter over input to extract features. |
+| **CNN** | $ h^{(l)} = \sigma(W^{(l)} * h^{(l-1)} + b^{(l)}) $; stacks convolution layers to extract spatial hierarchies. |
+| **Max-pooling** | $ y_{ij} = \max_{(p,q) \in \mathcal{R}_{ij}} x_{pq} $; reduces dimension by keeping max value in local patch $ \mathcal{R} $. |
+| **Backpropagation** | $ \delta^{(l)} = ((W^{(l+1)})^\top \delta^{(l+1)}) \odot \sigma'(z^{(l)}) $; propagates error backward to compute gradients. |
+| **Adam Optimizer** | Adaptive optimization algorithm combining Momentum and RMSProp for efficient training. |
+| **L-BFGS** | Quasi-Newton optimization method that approximates the Hessian matrix, effective for smaller datasets. |
+| **Universal Differential Equation** | $ \frac{du}{dt} = f(u) + NN_\theta(u) $; uses a neural network to approximate unknown terms in a differential equation. |
 
 ## 🧩 Clustering
 
