@@ -122,7 +122,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Universal Differential Equation** | $ \frac{du}{dt} = f(u) + NN_\theta(u) $; uses a neural network to approximate unknown terms in a differential equation. |
 
 ## Scientific machine learning
-![SciML Workflow](./SciML_Workflow.png)
+![SciML Workflow](./SciML_Workflow.jpeg)
 
 ## 🧩 Clustering
 
