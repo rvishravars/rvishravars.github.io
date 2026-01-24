@@ -7,16 +7,16 @@
 <meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="Fundamental Terms" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/machine-learning/fundamental-terms/" />
-<meta property="og:url" content="http://localhost:4000/machine-learning/fundamental-terms/" />
+<link rel="canonical" href="https://rvishravars.github.io/machine-learning/fundamental-terms/" />
+<meta property="og:url" content="https://rvishravars.github.io/machine-learning/fundamental-terms/" />
 <meta property="og:site_name" content="Notes and interests" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Fundamental Terms" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Fundamental Terms","url":"http://localhost:4000/machine-learning/fundamental-terms/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Fundamental Terms","url":"https://rvishravars.github.io/machine-learning/fundamental-terms/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Notes and interests" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://rvishravars.github.io/feed.xml" title="Notes and interests" /></head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Notes and interests</a><nav class="site-nav">
@@ -139,6 +139,10 @@
     <tr>
       <td>Cross-Validation Error</td>
       <td>The average error computed by training and validating on multiple splits of the data to estimate generalization.</td>
+    </tr>
+    <tr>
+      <td>Closed-Form Solution</td>
+      <td>A mathematical expression that yields the exact solution directly in a finite number of steps (e.g., Normal Equation), unlike iterative methods.</td>
     </tr>
     <tr>
       <td>Best Straight Line</td>
@@ -329,6 +333,107 @@
     <tr>
       <td><strong>Assumptions</strong></td>
       <td>Linearity, Homoscedasticity (constant variance), Independence of errors, and Normality of residuals.</td>
+    </tr>
+    <tr>
+      <td><strong>Ridge Regression (L2)</strong></td>
+      <td>$ J(\theta) = \sum e_i^2 + \lambda |\theta|^2 $, adding a penalty on large weights to reduce overfitting.</td>
+    </tr>
+    <tr>
+      <td><strong>L2 Regularization Term</strong></td>
+      <td>$ |\theta|_2^2 = \sum \theta_j^2 $, the sum of squared coefficient values.</td>
+    </tr>
+    <tr>
+      <td><strong>Regularization Parameter ($\lambda$)</strong></td>
+      <td>Controls the trade-off: high $\lambda$ simplifies the model (high bias), low $\lambda$ fits data closely (high variance).</td>
+    </tr>
+    <tr>
+      <td><strong>Ridge Closed Form</strong></td>
+      <td>$ \theta = (X^\top X + \lambda I)^{-1} X^\top y $, the exact solution ensuring invertibility even if $ X^\top X $ is singular.</td>
+    </tr>
+    <tr>
+      <td><strong>Multicollinearity</strong></td>
+      <td>A situation where features are highly correlated; Ridge regression stabilizes estimates in this case.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="neural-networks">Neural networks</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>One-Line Explanation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Architecture</td>
+      <td>A single-layer neural network with one output neuron and no hidden layers.</td>
+    </tr>
+    <tr>
+      <td>Input Layer</td>
+      <td>Corresponds to the feature vector $ x $ (with an optional bias unit).</td>
+    </tr>
+    <tr>
+      <td>Weights &amp; Bias</td>
+      <td>The network weights $ w $ map to regression coefficients $ \theta_j $, and bias $ b $ maps to the intercept $ \theta_0 $.</td>
+    </tr>
+    <tr>
+      <td>Output Neuron</td>
+      <td>Computes the weighted sum $ z = w^\top x + b $.</td>
+    </tr>
+    <tr>
+      <td>Activation Function</td>
+      <td>Identity function $ f(z) = z $ (since linear regression predicts a continuous real value).</td>
+    </tr>
+    <tr>
+      <td>Training (Backprop)</td>
+      <td>Gradient descent on the Mean Squared Error (MSE) loss acts as backpropagation for this simple network.</td>
+    </tr>
+    <tr>
+      <td><strong>Sigmoid Activation</strong></td>
+      <td>$ \sigma(z) = \frac{1}{1+e^{-z}} $, squashes output to (0,1), used in binary classification.</td>
+    </tr>
+    <tr>
+      <td><strong>Tanh Activation</strong></td>
+      <td>$ \tanh(z) $, squashes output to (-1,1), often centers data better than sigmoid.</td>
+    </tr>
+    <tr>
+      <td><strong>ReLU (Rectified Linear)</strong></td>
+      <td>$ f(z) = \max(0, z) $, the most common activation today; solves vanishing gradients for positive inputs.</td>
+    </tr>
+    <tr>
+      <td><strong>Leaky ReLU</strong></td>
+      <td>$ f(z) = \max(\alpha z, z) $ where $ \alpha \approx 0.01 $, allows a small gradient for negative inputs to prevent “dying ReLU”.</td>
+    </tr>
+    <tr>
+      <td><strong>Softmax</strong></td>
+      <td>$ \sigma(z)_i = \frac{e^{z_i}}{\sum e^{z_j}} $, converts a vector of numbers into a probability distribution summing to 1.</td>
+    </tr>
+    <tr>
+      <td><strong>ELU (Exponential Linear)</strong></td>
+      <td>Smooths the negative part of ReLU to push mean activations closer to zero, speeding up learning.</td>
+    </tr>
+    <tr>
+      <td><strong>Vanishing Gradient Problem</strong></td>
+      <td>In deep networks with sigmoid/tanh, gradients approach zero during backprop, stopping early layers from learning.</td>
+    </tr>
+    <tr>
+      <td><strong>Zero-Centered Activation</strong></td>
+      <td>Tanh outputs are centered at 0 (-1 to 1), unlike Sigmoid (0 to 1); non-centered outputs can cause inefficient “zigzagging” gradient updates.</td>
+    </tr>
+    <tr>
+      <td><strong>Parametric ReLU (PReLU)</strong></td>
+      <td>An adaptive version of Leaky ReLU where the negative slope $\alpha$ is learned during training rather than fixed.</td>
+    </tr>
+    <tr>
+      <td><strong>Backpropagation (Chain Rule)</strong></td>
+      <td>$ \frac{\partial L}{\partial w} = \frac{\partial L}{\partial a} \cdot \frac{\partial a}{\partial z} \cdot \frac{\partial z}{\partial w} $, the recursive application of the chain rule to compute gradients for weight updates.</td>
+    </tr>
+    <tr>
+      <td><strong>Momentum</strong></td>
+      <td>$ v_t = \gamma v_{t-1} + \eta \nabla J(\theta) $; accelerates training by accumulating past gradients to smooth out oscillations and pass local minima.</td>
     </tr>
   </tbody>
 </table>

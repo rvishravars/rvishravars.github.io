@@ -121,6 +121,9 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **L-BFGS** | Quasi-Newton optimization method that approximates the Hessian matrix, effective for smaller datasets. |
 | **Universal Differential Equation** | $ \frac{du}{dt} = f(u) + NN_\theta(u) $; uses a neural network to approximate unknown terms in a differential equation. |
 
+## Scientific machine learning
+![SciML Workflow](./SciML_Workflow.png)
+
 ## 🧩 Clustering
 
 | **Term** | **One-Line Explanation** |
