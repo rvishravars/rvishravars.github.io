@@ -38,6 +38,8 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | Best Straight Line | In linear regression, the line $ y = w^\top x + b $ that minimizes training loss (e.g., MSE) across the dataset. |
 | Overfitting | When a model fits the training data too closely, capturing noise and performing poorly on unseen data. |
 | Underfitting | When a model is too simple to capture the underlying pattern, leading to high error on both training and test data. |
+| Ordinary Differential Equation (ODE) | $ \frac{dy}{dt} = f(y, t) $, an equation involving derivatives of a function with respect to a single independent variable. |
+| Partial Differential Equation (PDE) | $ \frac{\partial u}{\partial t} = f(u, \nabla u, \nabla^2 u, x, t) $, an equation involving partial derivatives of a function with respect to multiple independent variables. |
 
 ## 🧠 Classification
 
@@ -120,9 +122,18 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 | **Adam Optimizer** | Adaptive optimization algorithm combining Momentum and RMSProp for efficient training. |
 | **L-BFGS** | Quasi-Newton optimization method that approximates the Hessian matrix, effective for smaller datasets. |
 | **Universal Differential Equation** | $ \frac{du}{dt} = f(u) + NN_\theta(u) $; uses a neural network to approximate unknown terms in a differential equation. |
+| **Symbolic Regression** | Finds a mathematical expression that best fits data by searching through a space of operators and functions. |
 
 ## Scientific machine learning
+
 ![SciML Workflow](./SciML_Workflow.jpeg)
+
+- UDEs (Universal Differential Equations) are fully and partly defined by universal approximators.
+- A universal approximator is a parameterized object capable of representing any function $f: \mathbb{R}^n \rightarrow \mathbb{R}^m$. Example: Fourier series constructing a square wave over sinusoidal waves (by superimposing waves).
+- Another example is neural networks which can work in higher dimensions, i.e., more nodes can help define complex functions $f_\theta(x)$.
+- Neural networks as universal function approximators used as universal differential equations: $\frac{du}{dt} = f(u, t) + NN_\theta(u, t)$.
+- SciML is **Known (Model)** + **Source (Universal approximator)**: $\frac{du}{dt} = f_{\text{known}}(u, t) + NN_\theta(u, t)$
+
 
 ## 🧩 Clustering
 
@@ -155,7 +166,7 @@ Below is a collection of core ML terms and their overly simplistic one line expl
 
 | **Term** | **One-Line Explanation** |
 |-----------|---------------------------|
-| **Principal Component Analysis (PCA)** | Projects data to directions (principal components) that maximize variance. |
+| **Principal Component Analysis (PCA)** | Projects data to directions (principal components) that maximize variance. Many features are co-related ! PCA is a technique in data analysis and ML for dimentionality reduction while retaining much variability as possible. And visualising data beyond 3D is not possible. |
 | **Eigenvector** | The direction of maximum variance in PCA, representing a principal component. |
 | **Eigenvalue** | Measures how much variance is captured by each eigenvector. |
 | **Hebbian Learning** | Neural learning principle stating that “neurons that fire together wire together.” |
