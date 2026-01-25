@@ -10,7 +10,7 @@ permalink: /writeup/
 
 This page collects my essays and technical writeups.
 
-- [Learning Dynamics: RL Meets UDEs](/writeup/ude-rl/)
+- [Learning Dynamics: RL Meets UDEs](https://tinyurl.com/24yhv5rp)
 - [Embedding based retrieval](/writeup/Embedding-Based-Retrieval-Study.pdf)
 - [Unified mobile resource governor](/writeup/Unified_Mobile_Resource_Governor.pdf)
 

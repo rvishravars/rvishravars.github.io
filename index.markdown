@@ -18,4 +18,4 @@ I have gathered some content which interest me. Hope you may be able to pick up 
 - [Western classical music](/western-classical-music/): score study, theory insights, practice notes, repertoire recommendations, and listening guides.
 - [Philosophy](/philosophy/): essays, notes, and reflections on philosophy.
 - [Writeup](/writeup/): essays and technical writeups.
-- [Learning Dynamics: RL Meets UDEs](/writeup/ude-rl/): exploring the combination of Reinforcement Learning and Universal Differential Equations.
+- [Learning Dynamics: RL Meets UDEs](https://tinyurl.com/24yhv5rp): exploring the combination of Reinforcement Learning and Universal Differential Equations.
