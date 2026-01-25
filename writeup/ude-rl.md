@@ -1,4 +1,12 @@
+---
+layout: page
+title: Learning Dynamics - RL Meets UDEs
+permalink: /writeup/ude-rl/
+---
+
 # Learning Dynamics Reinforcement Learning Meets Universal Differential Equations
+
+[← Back to Writeups](/writeup/)
 
 Ever faced a problem where you knew some rules of the game but not all of them? That's essentially what Universal Differential Equations (UDEs) and Reinforcement Learning (RL) solve together.
 
